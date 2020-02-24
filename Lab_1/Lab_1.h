@@ -1,0 +1,3 @@
+inline 
+
+int main();
