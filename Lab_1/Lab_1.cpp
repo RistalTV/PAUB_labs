@@ -11,7 +11,7 @@ using namespace std;
 
 bool func_parity(int CountElem);
 int func_MiddleElem(int CountElement);
-
+int func_scan(void);
 int main()
 {
 	setlocale(0, "");
@@ -29,6 +29,7 @@ int main()
 		ArrMain[i] = rand() % 200-100;
 		cout << ArrMain[i] << " ";
 	}
+
 	cout << endl;
 //
 //  Переворачиваем массив
@@ -95,8 +96,7 @@ int main()
 	unsigned int MaxInputElem = editCountElement - 10;
 	for (unsigned int i = editCountElement; i < maxCountElem; i++)
 	{	
-		cout << "Введите значение I: ";
-		cin >> I;
+		I = func_scan();
 		ArrMain[i] = ArrMain[I + 10] - 2;
 	}
 //
@@ -109,7 +109,7 @@ int main()
 		cout << ArrMain[i] << " ";
 	}
 	cout <<endl << "________________________________________________________________________________" << endl;
-
+	system("pause");
 return 0;
 }
 //
@@ -129,4 +129,30 @@ int func_MiddleElem(int CountElement)
 {
 	unsigned int MiddleElem = (CountElement / 2) ;
 	return MiddleElem;
+}
+// 
+//	Функция считывания I с проверкой ввода с клавиатуры
+//
+int func_scan() 
+{
+	int I= -842234;
+		while ((I<0) or (I>90))
+		{
+			if (I == -842234)
+				cout << "Введите значение I: ";
+			else if ((I < 0) or (I > 90))
+				cout << "Введите верное значение I: ";
+			else if ((I > 0) or (I < 90))
+				cout << "Введите значение I: ";
+			cin >> I;
+			if (cin.fail())
+			{
+				cout << "Введите верное значение I: ";
+				cin.clear();
+				cin.ignore(100, '\n');
+			}
+			cin.ignore(100, '\n');
+		}
+
+	return I;
 }
