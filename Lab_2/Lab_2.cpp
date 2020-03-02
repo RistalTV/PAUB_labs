@@ -14,7 +14,7 @@ int main()
 {
 	setlocale(0, "");
 	srand((unsigned int)time(NULL));
-	unsigned int const CountElem = rand() % 10;// 10 + 3;//80 + 12;
+	unsigned int const CountElem = rand() % 100;// 10 + 3;//80 + 12;
 	unsigned int const CountSimpleNum = 100;
 	unsigned int const CountSimpleElemDeka = 50;
 	deque<int> dek1(CountElem);
