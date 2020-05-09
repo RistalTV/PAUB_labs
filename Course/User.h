@@ -2,12 +2,86 @@
 #include <string>
 #include <deque>
 #include "Book.h"
+#include "Data.h"
 using namespace std;
 
 class User
 {
 public:
-	
+	//==============================================================
+	//  Интерфейсы
+	//==============================================================
+		//--------------------------------------------------------------
+		// Установки
+		//--------------------------------------------------------------
+		
+		//  Установки логина
+		void set_login(string login);
+		//  Установки пароля
+		int  set_pass(string pass);
+		//  Установки уровня доступа
+		void set_access(unsigned int access);
+
+		//  Установки ID
+		void set_id(unsigned int id);
+		//  Установки Имени
+		void set_name(string name);
+		//  Установки Фамилии
+		void set_surname(string surname);
+		//  Установки Отчества
+		void set_patronymic(string patronymic);
+		//  Установки дня рождения
+		void set_birthday(string birthday);
+		
+		
+		//--------------------------------------------------------------
+		//  Удаления
+		//--------------------------------------------------------------
+		
+		// Удаление книги, которая была взята
+		void rm_Books_taken(Book book);
+		// Удаление книги, которая была возвращена
+		void rm_Books_Back_Returned(Book book);
+		
+		
+		//--------------------------------------------------------------
+		//  Добавления
+		//--------------------------------------------------------------
+		
+		// Добавление книги, которая была взята
+		void add_Books_taken(Book book);
+		// Добавление книги, которая была возвращена
+		void add_Books_Back_Returned(Book book);
+
+
+
+		//--------------------------------------------------------------
+		//  Получения
+		//--------------------------------------------------------------
+		
+		// Получение логина
+		string get_login();
+		// Получение пароля
+		string get_pass();
+		// Получение уровня доступа
+		int get_access();
+	 
+		// Получение ID
+		int get_id();
+		// Получение имени
+		string get_name();
+		// Получение фамилии
+		string get_surname();
+		// Получение отчества
+		string get_patronymic();
+		// Получение дня рождения
+		string get_birthday();
+		// Получение дэка состоящего из книг, которые были взяты
+		deque<Book> get_Books_taken();
+		// Получение дэка состоящего из книг, которые были возвращены
+		deque<Book> get_Books_Back_Returned();
+
+	//--------------------------------------------------------------
 private:
 
 	// Логин пользователя
@@ -15,20 +89,24 @@ private:
 	// Пароль пользователя
 	string _pass;
 	// Уровень доступа пользователя
-	int _access;
+	unsigned int _access;
 
 	
+	// Номер пользоваеля в бд
+	unsigned int _id;
 	// Имя пользователя
-	string name;
+	string _name;
 	// Фамилия пользователя
-	string surname;
+	string _surname;
 	// Отчество пользователя
-	string patronymic;
+	string _patronymic;
 	// День рождения пользователя
 	string _birthday;
 
 
-	// 
-	deque<Book> books;
-	//
+	// Книги
+		// Взятые
+		deque<Book> Books_taken;
+		// Назад возращённые
+		deque<Book> Books_Back_Returned;
 };
