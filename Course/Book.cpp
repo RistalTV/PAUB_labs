@@ -46,7 +46,12 @@ void Book::set_creation_data(string creation_data) {
 //	ћетод позвол€ющий задать значение параметру	_release_data	
 void Book::set_release_data(string release_data) {
 	_Release_data = release_data;
-};
+}
+void Book::set_user_took_the_book_date(string user_took_the_book_date)
+{
+	_user_took_the_book_date = user_took_the_book_date;
+}
+;
 //	ћетод позвол€ющий задать значение параметру	_content		
 void Book::set_content(string content) {
 	_content = content;
@@ -68,7 +73,12 @@ string	Book::get_authors() { return _Authors; };
 //	ћетод позвол€ющий получить значение параметра _creation_data	
 string	Book::get_creation_data() { return _Creation_data; };
 //	ћетод позвол€ющий получить значение параметра _release_data	
-string	Book::get_release_data() { return _Release_data; };
+string	Book::get_release_data() { return _Release_data; }
+string Book::get_user_took_the_book_date()
+{
+	return _user_took_the_book_date;
+}
+;
 //	ћетод позвол€ющий получить значение параметра _content		
 string	Book::get_content() { return _content; };
 //	ћетод позвол€ющий получить значение параметра _count_page

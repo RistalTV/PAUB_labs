@@ -36,6 +36,8 @@ class Book
 			void set_creation_data(string creation_data);
 			//	ћетод позвол€ющий задать значение параметру	_release_data	
 			void set_release_data(string release_data);
+			//	ћетод позвол€ющий задать значение параметру	_user_took_the_book_date
+			void set_user_took_the_book_date(string user_took_the_book_date);
 			//	ћетод позвол€ющий задать значение параметру	_content		
 			void set_content(string content);
 			//	ћетод позвол€ющий задать значение параметру _count_page		
@@ -55,10 +57,13 @@ class Book
 			string	get_creation_data();
 			//	ћетод позвол€ющий получить значение параметра _release_data	
 			string	get_release_data();
+			//	ћетод позвол€ющий получить значение параметра _user_took_the_book_date	
+			string	get_user_took_the_book_date();
 			//	ћетод позвол€ющий получить значение параметра _content		
 			string	get_content();		
 			//	ћетод позвол€ющий получить значение параметра _count_page
-			int		get_count_page();			
+			int		get_count_page();
+
 	
 		// ---------------------------------------------------------------------------
 

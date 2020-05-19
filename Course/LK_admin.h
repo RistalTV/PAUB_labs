@@ -315,9 +315,10 @@ namespace Course {
 			// 
 			this->PanelDeleteBook->BackColor = System::Drawing::Color::BurlyWood;
 			this->PanelDeleteBook->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->PanelDeleteBook->Location = System::Drawing::Point(701, 41);
+			this->PanelDeleteBook->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->PanelDeleteBook->Location = System::Drawing::Point(0, 35);
 			this->PanelDeleteBook->Name = L"PanelDeleteBook";
-			this->PanelDeleteBook->Size = System::Drawing::Size(200, 100);
+			this->PanelDeleteBook->Size = System::Drawing::Size(781, 731);
 			this->PanelDeleteBook->TabIndex = 3;
 			// 
 			// PanelEditInfoBook
@@ -347,12 +348,12 @@ namespace Course {
 			this->PanelRegNewBook->Controls->Add(this->ContextTextBox);
 			this->PanelRegNewBook->Controls->Add(this->AutorsTextBox);
 			this->PanelRegNewBook->Controls->Add(this->NameTextBox);
-			this->PanelRegNewBook->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->PanelRegNewBook->Location = System::Drawing::Point(0, 35);
 			this->PanelRegNewBook->Margin = System::Windows::Forms::Padding(0);
 			this->PanelRegNewBook->Name = L"PanelRegNewBook";
-			this->PanelRegNewBook->Size = System::Drawing::Size(781, 731);
+			this->PanelRegNewBook->Size = System::Drawing::Size(0, 0);
 			this->PanelRegNewBook->TabIndex = 1;
+			this->PanelRegNewBook->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LK_admin::PanelRegNewBook_Paint);
 			// 
 			// release_data
 			// 
@@ -586,5 +587,7 @@ namespace Course {
 		System::Void AutorsTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
 		System::Void ContextTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
 		System::Void RegBtn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void PanelRegNewBook_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
 };
 }
