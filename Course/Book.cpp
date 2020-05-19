@@ -4,9 +4,18 @@ Book::Book() {
 
 }
 
+// Конструктор №1
+Book::Book(int id_book, string name, string authors, string creation_data, string release_data, string content, int count_page) {
+	set_id_book(id_book);
+	set_name(name);
+	set_authors(authors);
+	set_creation_data(creation_data);
+	set_release_data(release_data);
+	set_content(content);
+	set_count_page(count_page);
+}
 // Конструктор №2
-Book::Book(int id_book, string name, string authors, string creation_data, string release_data, string content, int count_page){
-	set_id_book( id_book);
+Book::Book(string name, string authors, string creation_data, string release_data, string content, int count_page) {
 	set_name(name);
 	set_authors(authors);
 	set_creation_data(creation_data);
