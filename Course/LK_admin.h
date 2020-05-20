@@ -69,6 +69,14 @@ namespace Course {
 	public: System::Windows::Forms::DateTimePicker^ release_data;
 	public: System::Windows::Forms::DateTimePicker^ creation_data;
 	public: System::Windows::Forms::Button^ RegBtn;
+	private: System::Windows::Forms::Button^ DeleteBookPanel_Btn;
+	public:
+
+	public:
+	private: System::Windows::Forms::Label^ label8;
+	public: System::Windows::Forms::DataGridView^ FullListBookInDB_DataGridView;
+	private:
+
 
 	public:
 		/// <summary>
@@ -83,6 +91,7 @@ namespace Course {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->MainPanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->MainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->upMainLeftPanel = (gcnew System::Windows::Forms::Panel());
@@ -95,10 +104,14 @@ namespace Course {
 			this->RegNewBook = (gcnew System::Windows::Forms::Button());
 			this->exit = (gcnew System::Windows::Forms::Button());
 			this->MainRightPanel = (gcnew System::Windows::Forms::Panel());
+			this->ButtonMainRightPanel = (gcnew System::Windows::Forms::Panel());
+			this->PanelDeleteBook = (gcnew System::Windows::Forms::Panel());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->DeleteBookPanel_Btn = (gcnew System::Windows::Forms::Button());
+			this->FullListBookInDB_DataGridView = (gcnew System::Windows::Forms::DataGridView());
 			this->PanelSearch = (gcnew System::Windows::Forms::Panel());
 			this->PanelRegUser = (gcnew System::Windows::Forms::Panel());
 			this->PanelEditDataUsers = (gcnew System::Windows::Forms::Panel());
-			this->PanelDeleteBook = (gcnew System::Windows::Forms::Panel());
 			this->PanelEditInfoBook = (gcnew System::Windows::Forms::Panel());
 			this->PanelRegNewBook = (gcnew System::Windows::Forms::Panel());
 			this->release_data = (gcnew System::Windows::Forms::DateTimePicker());
@@ -116,11 +129,13 @@ namespace Course {
 			this->NameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->UpMainRightPanel = (gcnew System::Windows::Forms::Panel());
 			this->LabelUpMainRightPanel = (gcnew System::Windows::Forms::Label());
-			this->ButtonMainRightPanel = (gcnew System::Windows::Forms::Panel());
 			this->MainPanel->SuspendLayout();
 			this->MainLeftPanel->SuspendLayout();
 			this->upMainLeftPanel->SuspendLayout();
 			this->MainRightPanel->SuspendLayout();
+			this->ButtonMainRightPanel->SuspendLayout();
+			this->PanelDeleteBook->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->BeginInit();
 			this->PanelRegNewBook->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->count_page))->BeginInit();
 			this->UpMainRightPanel->SuspendLayout();
@@ -130,10 +145,13 @@ namespace Course {
 			// 
 			this->MainPanel->Controls->Add(this->MainLeftPanel);
 			this->MainPanel->Controls->Add(this->MainRightPanel);
-			this->MainPanel->FlowDirection = System::Windows::Forms::FlowDirection::BottomUp;
-			this->MainPanel->Location = System::Drawing::Point(2, 0);
+			this->MainPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->MainPanel->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
+			this->MainPanel->Location = System::Drawing::Point(0, 0);
+			this->MainPanel->MaximumSize = System::Drawing::Size(980, 600);
+			this->MainPanel->MinimumSize = System::Drawing::Size(980, 600);
 			this->MainPanel->Name = L"MainPanel";
-			this->MainPanel->Size = System::Drawing::Size(981, 766);
+			this->MainPanel->Size = System::Drawing::Size(980, 600);
 			this->MainPanel->TabIndex = 0;
 			// 
 			// MainLeftPanel
@@ -260,7 +278,7 @@ namespace Course {
 			this->exit->BackColor = System::Drawing::Color::NavajoWhite;
 			this->exit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->exit->Location = System::Drawing::Point(10, 499);
+			this->exit->Location = System::Drawing::Point(10, 539);
 			this->exit->Name = L"exit";
 			this->exit->Size = System::Drawing::Size(180, 50);
 			this->exit->TabIndex = 0;
@@ -270,19 +288,102 @@ namespace Course {
 			// 
 			// MainRightPanel
 			// 
-			this->MainRightPanel->Controls->Add(this->PanelSearch);
-			this->MainRightPanel->Controls->Add(this->PanelRegUser);
-			this->MainRightPanel->Controls->Add(this->PanelEditDataUsers);
-			this->MainRightPanel->Controls->Add(this->PanelDeleteBook);
-			this->MainRightPanel->Controls->Add(this->PanelEditInfoBook);
-			this->MainRightPanel->Controls->Add(this->PanelRegNewBook);
-			this->MainRightPanel->Controls->Add(this->UpMainRightPanel);
 			this->MainRightPanel->Controls->Add(this->ButtonMainRightPanel);
 			this->MainRightPanel->Location = System::Drawing::Point(200, 0);
 			this->MainRightPanel->Margin = System::Windows::Forms::Padding(0);
 			this->MainRightPanel->Name = L"MainRightPanel";
 			this->MainRightPanel->Size = System::Drawing::Size(781, 766);
 			this->MainRightPanel->TabIndex = 1;
+			// 
+			// ButtonMainRightPanel
+			// 
+			this->ButtonMainRightPanel->Controls->Add(this->PanelDeleteBook);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelSearch);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelRegUser);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelEditDataUsers);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelEditInfoBook);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelRegNewBook);
+			this->ButtonMainRightPanel->Controls->Add(this->UpMainRightPanel);
+			this->ButtonMainRightPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->ButtonMainRightPanel->Location = System::Drawing::Point(0, 0);
+			this->ButtonMainRightPanel->Margin = System::Windows::Forms::Padding(0);
+			this->ButtonMainRightPanel->Name = L"ButtonMainRightPanel";
+			this->ButtonMainRightPanel->Size = System::Drawing::Size(781, 766);
+			this->ButtonMainRightPanel->TabIndex = 1;
+			// 
+			// PanelDeleteBook
+			// 
+			this->PanelDeleteBook->AutoSize = true;
+			this->PanelDeleteBook->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->PanelDeleteBook->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelDeleteBook->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelDeleteBook->Controls->Add(this->label8);
+			this->PanelDeleteBook->Controls->Add(this->DeleteBookPanel_Btn);
+			this->PanelDeleteBook->Controls->Add(this->FullListBookInDB_DataGridView);
+			this->PanelDeleteBook->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->PanelDeleteBook->Location = System::Drawing::Point(0, 35);
+			this->PanelDeleteBook->MaximumSize = System::Drawing::Size(780, 565);
+			this->PanelDeleteBook->Name = L"PanelDeleteBook";
+			this->PanelDeleteBook->Size = System::Drawing::Size(780, 565);
+			this->PanelDeleteBook->TabIndex = 3;
+			// 
+			// label8
+			// 
+			this->label8->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Impact", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(0, 0);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(778, 30);
+			this->label8->TabIndex = 1;
+			this->label8->Text = L"Полный список книг присутствующих в базе данных";
+			this->label8->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// DeleteBookPanel_Btn
+			// 
+			this->DeleteBookPanel_Btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->DeleteBookPanel_Btn->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->DeleteBookPanel_Btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->DeleteBookPanel_Btn->Location = System::Drawing::Point(0, 501);
+			this->DeleteBookPanel_Btn->Name = L"DeleteBookPanel_Btn";
+			this->DeleteBookPanel_Btn->Size = System::Drawing::Size(778, 62);
+			this->DeleteBookPanel_Btn->TabIndex = 2;
+			this->DeleteBookPanel_Btn->Text = L"Удалить элемент";
+			this->DeleteBookPanel_Btn->UseVisualStyleBackColor = false;
+			this->DeleteBookPanel_Btn->Click += gcnew System::EventHandler(this, &LK_admin::DeleteBookPanel_Btn_Click);
+			// 
+			// FullListBookInDB_DataGridView
+			// 
+			this->FullListBookInDB_DataGridView->AllowUserToAddRows = false;
+			this->FullListBookInDB_DataGridView->AllowUserToDeleteRows = false;
+			this->FullListBookInDB_DataGridView->AllowUserToResizeColumns = false;
+			this->FullListBookInDB_DataGridView->AllowUserToResizeRows = false;
+			this->FullListBookInDB_DataGridView->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->FullListBookInDB_DataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->FullListBookInDB_DataGridView->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->FullListBookInDB_DataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->FullListBookInDB_DataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->FullListBookInDB_DataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->FullListBookInDB_DataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->FullListBookInDB_DataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->FullListBookInDB_DataGridView->Location = System::Drawing::Point(-3, 26);
+			this->FullListBookInDB_DataGridView->Margin = System::Windows::Forms::Padding(20);
+			this->FullListBookInDB_DataGridView->MaximumSize = System::Drawing::Size(781, 474);
+			this->FullListBookInDB_DataGridView->MinimumSize = System::Drawing::Size(781, 474);
+			this->FullListBookInDB_DataGridView->Name = L"FullListBookInDB_DataGridView";
+			this->FullListBookInDB_DataGridView->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->FullListBookInDB_DataGridView->Size = System::Drawing::Size(781, 474);
+			this->FullListBookInDB_DataGridView->StandardTab = true;
+			this->FullListBookInDB_DataGridView->TabIndex = 0;
 			// 
 			// PanelSearch
 			// 
@@ -310,16 +411,6 @@ namespace Course {
 			this->PanelEditDataUsers->Name = L"PanelEditDataUsers";
 			this->PanelEditDataUsers->Size = System::Drawing::Size(200, 100);
 			this->PanelEditDataUsers->TabIndex = 4;
-			// 
-			// PanelDeleteBook
-			// 
-			this->PanelDeleteBook->BackColor = System::Drawing::Color::BurlyWood;
-			this->PanelDeleteBook->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->PanelDeleteBook->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->PanelDeleteBook->Location = System::Drawing::Point(0, 35);
-			this->PanelDeleteBook->Name = L"PanelDeleteBook";
-			this->PanelDeleteBook->Size = System::Drawing::Size(781, 731);
-			this->PanelDeleteBook->TabIndex = 3;
 			// 
 			// PanelEditInfoBook
 			// 
@@ -532,27 +623,18 @@ namespace Course {
 			this->LabelUpMainRightPanel->Size = System::Drawing::Size(0, 20);
 			this->LabelUpMainRightPanel->TabIndex = 0;
 			// 
-			// ButtonMainRightPanel
-			// 
-			this->ButtonMainRightPanel->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->ButtonMainRightPanel->Location = System::Drawing::Point(0, 0);
-			this->ButtonMainRightPanel->Margin = System::Windows::Forms::Padding(0);
-			this->ButtonMainRightPanel->Name = L"ButtonMainRightPanel";
-			this->ButtonMainRightPanel->Size = System::Drawing::Size(781, 766);
-			this->ButtonMainRightPanel->TabIndex = 1;
-			// 
 			// LK_admin
 			// 
 			this->AccessibleRole = System::Windows::Forms::AccessibleRole::ButtonMenu;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->ClientSize = System::Drawing::Size(984, 561);
+			this->ClientSize = System::Drawing::Size(982, 601);
 			this->Controls->Add(this->MainPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(1000, 600);
+			this->MaximumSize = System::Drawing::Size(998, 640);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(1000, 600);
+			this->MinimumSize = System::Drawing::Size(998, 640);
 			this->Name = L"LK_admin";
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -563,6 +645,10 @@ namespace Course {
 			this->upMainLeftPanel->ResumeLayout(false);
 			this->upMainLeftPanel->PerformLayout();
 			this->MainRightPanel->ResumeLayout(false);
+			this->ButtonMainRightPanel->ResumeLayout(false);
+			this->ButtonMainRightPanel->PerformLayout();
+			this->PanelDeleteBook->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->EndInit();
 			this->PanelRegNewBook->ResumeLayout(false);
 			this->PanelRegNewBook->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->count_page))->EndInit();
@@ -587,7 +673,10 @@ namespace Course {
 		System::Void AutorsTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
 		System::Void ContextTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
 		System::Void RegBtn_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void DeleteBookPanel_Btn_Click(System::Object^ sender, System::EventArgs^ e);
+
 private: System::Void PanelRegNewBook_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+
 };
 }

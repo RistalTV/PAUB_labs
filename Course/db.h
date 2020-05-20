@@ -3,12 +3,15 @@
 // Подключённые библиотеки
 #include "Book.h"
 #include "User.h"
+#include <cliext/vector>
+#include <deque>
 #include "MessageWarnErrorInfo.h"
 
 //==============================================================
 // Подключённые namespace пространства
 //==============================================================
 using namespace std;
+using namespace cliext;
 using namespace System::Data::SQLite;
 
 // =============================================
@@ -25,7 +28,13 @@ using namespace System::Data::SQLite;
 		deque<User> User;
 		deque<Book> Book;
 	};
-
+	// Структура которою передают на входе
+	struct UserInfo
+	{
+		User user;
+		bool valid_login;
+		int access;
+	};
 // =============================================
 // Функции добавления в таблицы бд
 
@@ -53,19 +62,19 @@ using namespace System::Data::SQLite;
 // =============================================
 // Функции получения данных из талиц дб
 
-	// Получение данных из талицы books (0 - хорошо, 1 - ошибка, 2 - нехватает данных)
+	// Получение данных из талицы books
 	deque<Book> get_deque_books();
-	// Получение данных из талицы users (0 - хорошо, 1 - ошибка, 2 - нехватает данных)
+	// Получение данных из талицы users 
 	deque<User> get_deque_users();
-	// Получение данных из талицы books_back_returned (0 - хорошо, 1 - ошибка, 2 - нехватает данных)
+	// Получение данных из талицы books_back_returned
 	UserBook get_deque_books_back_returned();
-	// Получение данных из талицы books_taken (0 - хорошо, 1 - ошибка, 2 - нехватает данных)
+	// Получение данных из талицы books_taken
 	UserBook get_deque_books_taken();
 	// Получение уровня доступа
-	int get_access_user(int acess);
+	int get_access_user(int id);
 
 // =============================================
 // Функции валидации
 
 	// Проверка на вход
-	bool validation_login(string login, string pass);
+	UserInfo validation_login(string login, string pass);

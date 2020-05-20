@@ -7,3 +7,4 @@ std::string CastStrSystemToStd(System::String^ text)
 		text2 += text[i];
 	return text2;
 }
+
