@@ -45,12 +45,12 @@ int add_to_users(User user)
 		db->Open();
 		string Values = "'" + user.get_login() + "', ";
 		Values += "'" + user.get_pass() + "', ";
-		Values += "" + std::to_string(user.get_access()) + ", ";
+		Values += std::to_string(user.get_access()) + ", ";
 		Values += "'" + user.get_name() + "', ";
 		Values += "'" + user.get_surname() + "', ";
 		Values += "'" + user.get_patronymic() + "', ";
-		Values += "'" + user.get_birthday() + "', ";
-		string cmdText = "INSERT INTO users (login, pass, access, name, surname, patronymic, birthday) VALUES( " + Values + " );";
+		Values += "'" + user.get_birthday() +"'" ;
+		string cmdText = "INSERT INTO users (login, pass, access, name, surname, patronymic, birthday) VALUES (" + Values + ");";
 		SQLiteCommand^ cmdInsertValue = db->CreateCommand();
 		cmdInsertValue->CommandText = gcnew System::String(cmdText.c_str());
 		cmdInsertValue->ExecuteNonQuery();
@@ -251,7 +251,7 @@ int delete_from_books_taken(Book book, User user)
 	{
 		delete (IDisposable^)db;
 	}
-	return 0;
+	return 1;
 }
 
 deque<Book> get_deque_books()
@@ -345,8 +345,8 @@ deque<User> get_deque_users()
 					case 4: {u1.set_access(atoi(stdSb.c_str())); Counter++; break; }
 					case 5: {u1.set_name(stdSb);				 Counter++; break; }
 					case 6: {u1.set_surname(stdSb);				 Counter++; break; }
-					case 8: {u1.set_patronymic(stdSb);			 Counter++; break; }
-					case 9: {u1.set_birthday(stdSb);			 Counter=1; break; }
+					case 7: {u1.set_patronymic(stdSb);			 Counter++; break; }
+					case 8: {u1.set_birthday(stdSb);			 Counter=1; break; }
 					}
 				}
 				users.push_back(u1);
@@ -586,5 +586,109 @@ UserInfo validation_login(string login, string pass)
 	finally
 	{
 		delete (IDisposable^)db;
+	}
+}
+
+void edit_user_to_users(int loc, string Str, int id)
+{// UPDATE "main"."users" SET "pass"='666677' WHERE "ID"='8';
+	string field;//нужное поле
+	switch (loc)
+	{
+	case 1: {field = "login"; break; }
+	case 2: {field = "pass"; break; }
+	case 3: {field = "access"; break; }
+	case 4: {field = "name"; break; }
+	case 5: {field = "surname"; break; }
+	case 6: {field = "patronymic"; break; }
+	case 7: {field = "birthday"; break; }
+	}
+	SQLiteConnection^ db = gcnew SQLiteConnection();
+	try
+	{
+		string ConStr = "Data Source=\"" + string(path_db) + "\"";
+		db->ConnectionString = gcnew System::String(ConStr.c_str());
+		db->Open();
+		string cmdText = "UPDATE users SET " + field + " = '" + Str + "' WHERE ID =" + to_string(id) + ";";
+		SQLiteCommand^ cmdInsertValue = db->CreateCommand();
+		cmdInsertValue->CommandText = gcnew System::String(cmdText.c_str());
+		cmdInsertValue->ExecuteNonQueryAsync();
+		db->Close();
+	}
+	catch (Exception^ e)
+	{
+		Msg("Error Executing SQL: " + e->ToString(), "Exception ...");
+	}
+	finally
+	{
+		delete (IDisposable^)db;
+	}
+}
+
+void edit_user_to_users(User user)
+{
+	string value[8];
+	value[0] = user.get_login();
+	value[1] = user.get_pass();
+	value[2] = to_string(user.get_access());
+	value[3] = user.get_name();
+	value[4] = user.get_surname();
+	value[5] = user.get_patronymic();
+	value[6] = user.get_birthday();
+	int k = 1;
+	for (int i = 0; i < 7; i++)
+	{
+		edit_user_to_users(k, value[i], user.get_id());
+		k++;
+	}
+}
+
+void edit_book_to_books(int loc, string Str, int id)
+{
+	string field;//нужное поле
+	switch (loc)
+	{
+	case 1: {field = "name"; break; }
+	case 2: {field = "authors"; break; }
+	case 3: {field = "creation_data"; break; }
+	case 4: {field = "release_data"; break; }
+	case 5: {field = "content"; break; }
+	case 6: {field = "count_page"; break; }
+	}
+	SQLiteConnection^ db = gcnew SQLiteConnection();
+	try
+	{
+		string ConStr = "Data Source=\"" + string(path_db) + "\"";
+		db->ConnectionString = gcnew System::String(ConStr.c_str());
+		db->Open();
+		string cmdText = "UPDATE books SET " + field + " = '" + Str + "' WHERE ID =" + to_string(id) + ";";
+		SQLiteCommand^ cmdInsertValue = db->CreateCommand();
+		cmdInsertValue->CommandText = gcnew System::String(cmdText.c_str());
+		cmdInsertValue->ExecuteNonQueryAsync();
+		db->Close();
+	}
+	catch (Exception^ e)
+	{
+		Msg("Error Executing SQL: " + e->ToString(), "Exception ...");
+	}
+	finally
+	{
+		delete (IDisposable^)db;
+	}
+}
+
+void edit_book_to_books(Book book)
+{
+	string value[6];
+	value[0] = book.get_name();
+	value[1] = book.get_authors();
+	value[2] = book.get_creation_data();
+	value[3] = book.get_release_data();
+	value[4] = book.get_content();
+	value[5] = to_string(book.get_count_page);
+	int k = 1;
+	for (int i = 0; i < 7; i++)
+	{
+		edit_book_to_books(k, value[i], book.get_id_book());
+		k++;
 	}
 }

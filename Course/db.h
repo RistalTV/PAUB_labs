@@ -78,3 +78,31 @@ using namespace System::Data::SQLite;
 
 	// Проверка на вход
 	UserInfo validation_login(string login, string pass);
+
+// =============================================
+// Функции изменения
+
+	// Изменяет данные пользователя
+	// loc: 
+	// 1 - login,
+	// 2 - pass,
+	// 3 - access,
+	// 4 - name,
+	// 5 - surname,
+	// 6 - patronymic,
+	// 7 - birthday
+	void edit_user_to_users(int loc, string Str, int id);
+	void edit_user_to_users(User user);
+
+	// Изменяет данные о книге
+		// loc: 
+		// 1 - name			,
+		// 2 - authors		,	
+		// 3 - creation_data,
+		// 4 - release_data	,
+		// 5 - content		,
+		// 6 - count_page	
+	void edit_book_to_books(int loc, string Str, int id);
+	void edit_book_to_books(Book book);
+
+

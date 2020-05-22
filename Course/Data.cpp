@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Data.h"
+#include "Func.h"
 
 namespace Course {
 	Data::Data()
@@ -46,9 +47,9 @@ namespace Course {
 
 	void Data::set_data(int day, int month, int year)
 	{
-		set_day(day);
-		set_month(month);
 		set_year(year);
+		set_month(month);
+		set_day(day);
 	}
 
 	void Data::set_data_now()
@@ -56,6 +57,52 @@ namespace Course {
 		time_t now = time(0);
 		tm* ltm = localtime(&now);
 		set_data(ltm->tm_mday, 1 + ltm->tm_mon, 1970 + ltm->tm_year);
+	}
+
+	void Data::splitData(string d)
+	{
+		if (d[2] == '.'&& d[5] == '.')
+		{// полная Х Х . Х Х . Х Х Х Х
+		 //        0 1 2 3 4 5 6 7 8 9
+			set_year(castCharToInt(d[6]) * 1000 + castCharToInt(d[7]) * 100 + castCharToInt(d[8]) * 10 + castCharToInt(d[9]));
+			set_month(castCharToInt(d[3]) * 10 + castCharToInt(d[4]));
+			set_day(castCharToInt(d[0])*10+ castCharToInt(d[1]));
+		}
+		else
+		{
+			if (d[1] == '.' && d[4] == '.')
+			{// 2 символа X . Х Х . Х Х Х Х
+			 //           0 1 2 3 4 5 6 7 8
+				set_year(castCharToInt(d[5]) * 1000 + castCharToInt(d[6]) * 100 + castCharToInt(d	[7]) * 10 + castCharToInt(d[8]));
+				set_month(castCharToInt(d[2]) * 10 + castCharToInt(d[3]));
+				set_day(castCharToInt(d[0]));
+			}
+			else
+			{
+				if (d[2] == '.' && d[4] == '.')
+				{// 1 символ Х X . Х . Х Х Х Х
+				 //          0 1 2 3 4 5 6 7 8 
+					set_year(castCharToInt(d[5]) * 1000 + castCharToInt(d[6]) * 100 +	castCharToInt(d[7]) * 10 + castCharToInt(d[8]));
+					set_month(castCharToInt(d[3]));
+					set_day(castCharToInt(d[0]) * 10 + castCharToInt(d[1]));
+				}
+				else
+				{
+					if (d[1] == '.' && d[3] == '.')
+					{// 1 символ Х . Х . Х Х Х Х
+					 //          0 1 2 3 4 5 6 7 
+						set_year(castCharToInt(d[4]) * 1000 + castCharToInt(d[5]) * 100 + castCharToInt(d[6]) * 10 + castCharToInt(d[7]));
+						set_month(castCharToInt(d[2]));
+						set_day(castCharToInt(d[0]));
+
+					}
+					else 
+					{ 
+						Msg("Ошибка в дате", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Warning); 
+					}
+				}
+			}
+		}
 	}
 
 	Data Data::get_Data_Now()
@@ -97,6 +144,21 @@ namespace Course {
 	int Data::get_year()
 	{
 		return _year;
+	}
+
+	int Data::get_delta_day(int x1, int x2)
+	{
+		return x1 - x2;
+	}
+
+	int Data::get_delta_month(int x1, int x2)
+	{
+		return x1 - x2;
+	}
+
+	int Data::get_delta_year(int x1, int x2)
+	{
+		return x1 - x2;
 	}
 
 	int Data::number_of_days_in_a_month(void)

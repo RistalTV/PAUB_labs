@@ -4,6 +4,7 @@
 //==============================================================
 #include <string>
 #include <time.h>
+#include "MessageWarnErrorInfo.h"
 //==============================================================
 // Подключённые namespace пространства
 //==============================================================
@@ -30,6 +31,8 @@ namespace Course {
 		void set_data(int day, int month, int year);
 		// Установка актуальной даты
 		void set_data_now();
+		// Сплитит стринг Формата ХХ.ХХ.ХХХХ
+		void splitData(string d);
 		// Получение даты
 			// Получение актуальной даты
 		Data get_Data_Now();
@@ -45,6 +48,13 @@ namespace Course {
 		int get_month();
 		// Получение года
 		int get_year();
+		// Получение изменения дня
+		int get_delta_day(int x1, int x2);
+		// Получение изменения месяца
+		int get_delta_month(int x1, int x2);
+		// Получение изменения года
+		int get_delta_year(int x1, int x2);
+
 		// Формула подсчёта кол-ва дней в месяце
 		int number_of_days_in_a_month(void);
 	private:

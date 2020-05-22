@@ -19,5 +19,5 @@ using namespace System::Data;
 string CastStrSystemToStd(System::String^ text);
 
 // =============================================
-// Функция создания невидимой таблицы для DataTable
-System::Data::DataTable get_invisible_table(Book books);
+// Функция каста char в int
+int castCharToInt(char c);
