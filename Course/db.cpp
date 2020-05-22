@@ -684,7 +684,7 @@ void edit_book_to_books(Book book)
 	value[2] = book.get_creation_data();
 	value[3] = book.get_release_data();
 	value[4] = book.get_content();
-	value[5] = to_string(book.get_count_page);
+	value[5] = to_string(book.get_count_page());
 	int k = 1;
 	for (int i = 0; i < 7; i++)
 	{

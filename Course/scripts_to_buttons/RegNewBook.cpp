@@ -43,7 +43,7 @@ namespace Course {
 			string str_creation_data = create_data.get_str_Data();
 			string str_release_data = realea_data.get_str_Data();
 			int int_count_page = System::Convert::ToInt32(count_page->Value);// .ToInt32(count_page->Value);
-			Book book(CastStrSystemToStd(NameTextBox->Text), CastStrSystemToStd(AutorsTextBox->Text), CastStrSystemToStd(ContextTextBox->Text), str_creation_data, str_release_data, int_count_page);
+			Book book(CastStrSystemToStd(NameTextBox->Text), CastStrSystemToStd(AutorsTextBox->Text),  str_creation_data, str_release_data, CastStrSystemToStd(ContextTextBox->Text), int_count_page);
 
 			string text = "Имя: " + book.get_name() + "\nАвтор(ы): " + book.get_authors() + "\nТип происведения: " + book.get_content() + "\nДата создания: " + book.get_creation_data() + "\nДата выпуска: " + book.get_release_data() + "\nКол-во страниц: " + std::to_string(book.get_count_page());
 			System::String^ text1 = gcnew System::String(text.c_str());
@@ -51,14 +51,7 @@ namespace Course {
 			Msg(text1, "Инфо", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			// deque<Book> books = get_deque_books();
 			this->PanelRegUser->Dock = System::Windows::Forms::DockStyle::None;
-			this->PanelRegUser->MaximumSize.Height = 0;
-			this->PanelRegUser->MaximumSize.Width = 0;
-			this->PanelRegUser->MinimumSize.Height = 0;
-			this->PanelRegUser->MinimumSize.Width = 0;
-			this->PanelRegUser->Size.Height = 0;
-			this->PanelRegUser->Size.Width = 0;
-			this->PanelRegUser->Refresh();
-
+			
 		}
 	}
 

@@ -135,6 +135,66 @@ namespace Course
 	private: System::Windows::Forms::Label^ label23;
 private: System::Windows::Forms::Label^ EditDataUsers_panel_EditUser_ID;
 private: System::Windows::Forms::Label^ label24;
+private:
+private: System::Windows::Forms::Panel^ PanelEditInfoBook_select;
+public: System::Windows::Forms::DataGridView^ EditInfoBook_dataGridView;
+public: System::Windows::Forms::Button^ EditInfoBook_select_btn;
+private:
+public:
+
+private:
+
+private: System::Windows::Forms::Label^ label25;
+public: System::Windows::Forms::Panel^ PanelEditInfoBook_edit;
+private:
+private: System::Windows::Forms::Label^ lEditInfoBook_edit_ID;
+public:
+private: System::Windows::Forms::Label^ label32;
+public: System::Windows::Forms::DateTimePicker^ EditInfoBook_release_data;
+private:
+
+public: System::Windows::Forms::DateTimePicker^ EditInfoBook_creation_data;
+public: System::Windows::Forms::Button^ EditInfoBook_save;
+private:
+
+
+public: System::Windows::Forms::Label^ label26;
+public: System::Windows::Forms::Label^ label27;
+public: System::Windows::Forms::Label^ label28;
+public: System::Windows::Forms::Label^ label29;
+public: System::Windows::Forms::Label^ label30;
+public: System::Windows::Forms::Label^ label31;
+public: System::Windows::Forms::NumericUpDown^ EditInfoBook_count_page;
+
+public: System::Windows::Forms::TextBox^ EditInfoBook_ContextTextBox;
+
+public: System::Windows::Forms::TextBox^ EditInfoBook_AutorsTextBox;
+
+public: System::Windows::Forms::TextBox^ EditInfoBook_NameTextBox;
+
+public:
+
+
+
+
+
+
+private:
+
+public:
+
+
+
+
+
+
+
+
+
+
+
+
+private:
 
 	private:
 	public:
@@ -157,6 +217,7 @@ private: System::Windows::Forms::Label^ label24;
 		{
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->MainPanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->MainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->upMainLeftPanel = (gcnew System::Windows::Forms::Panel());
@@ -191,6 +252,28 @@ private: System::Windows::Forms::Label^ label24;
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->PanelSearch = (gcnew System::Windows::Forms::Panel());
+			this->PanelEditInfoBook = (gcnew System::Windows::Forms::Panel());
+			this->PanelEditInfoBook_edit = (gcnew System::Windows::Forms::Panel());
+			this->lEditInfoBook_edit_ID = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->EditInfoBook_release_data = (gcnew System::Windows::Forms::DateTimePicker());
+			this->EditInfoBook_creation_data = (gcnew System::Windows::Forms::DateTimePicker());
+			this->EditInfoBook_save = (gcnew System::Windows::Forms::Button());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->EditInfoBook_count_page = (gcnew System::Windows::Forms::NumericUpDown());
+			this->EditInfoBook_ContextTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->EditInfoBook_AutorsTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->EditInfoBook_NameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->PanelEditInfoBook_select = (gcnew System::Windows::Forms::Panel());
+			this->EditInfoBook_dataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->EditInfoBook_select_btn = (gcnew System::Windows::Forms::Button());
+			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->PanelEditDataUsers = (gcnew System::Windows::Forms::Panel());
 			this->EditDataUsers_panel_select = (gcnew System::Windows::Forms::Panel());
 			this->EditDataUsers_panel_select_dataGridView = (gcnew System::Windows::Forms::DataGridView());
@@ -215,8 +298,6 @@ private: System::Windows::Forms::Label^ label24;
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->EditDataUsers_panel_Edit_btn_save = (gcnew System::Windows::Forms::Button());
-			this->PanelSearch = (gcnew System::Windows::Forms::Panel());
-			this->PanelEditInfoBook = (gcnew System::Windows::Forms::Panel());
 			this->PanelRegNewBook = (gcnew System::Windows::Forms::Panel());
 			this->release_data = (gcnew System::Windows::Forms::DateTimePicker());
 			this->creation_data = (gcnew System::Windows::Forms::DateTimePicker());
@@ -241,6 +322,11 @@ private: System::Windows::Forms::Label^ label24;
 			this->PanelDeleteBook->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->BeginInit();
 			this->PanelRegUser->SuspendLayout();
+			this->PanelEditInfoBook->SuspendLayout();
+			this->PanelEditInfoBook_edit->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditInfoBook_count_page))->BeginInit();
+			this->PanelEditInfoBook_select->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditInfoBook_dataGridView))->BeginInit();
 			this->PanelEditDataUsers->SuspendLayout();
 			this->EditDataUsers_panel_select->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditDataUsers_panel_select_dataGridView))->BeginInit();
@@ -408,9 +494,9 @@ private: System::Windows::Forms::Label^ label24;
 			// 
 			this->ButtonMainRightPanel->Controls->Add(this->PanelDeleteBook);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelRegUser);
-			this->ButtonMainRightPanel->Controls->Add(this->PanelEditDataUsers);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelSearch);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelEditInfoBook);
+			this->ButtonMainRightPanel->Controls->Add(this->PanelEditDataUsers);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelRegNewBook);
 			this->ButtonMainRightPanel->Controls->Add(this->UpMainRightPanel);
 			this->ButtonMainRightPanel->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -705,13 +791,307 @@ private: System::Windows::Forms::Label^ label24;
 			this->label9->TabIndex = 0;
 			this->label9->Text = L"Введите имя:";
 			// 
+			// PanelSearch
+			// 
+			this->PanelSearch->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelSearch->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelSearch->Location = System::Drawing::Point(701, 253);
+			this->PanelSearch->MaximumSize = System::Drawing::Size(780, 565);
+			this->PanelSearch->Name = L"PanelSearch";
+			this->PanelSearch->Size = System::Drawing::Size(200, 100);
+			this->PanelSearch->TabIndex = 6;
+			// 
+			// PanelEditInfoBook
+			// 
+			this->PanelEditInfoBook->AutoSize = true;
+			this->PanelEditInfoBook->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelEditInfoBook->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelEditInfoBook->Controls->Add(this->PanelEditInfoBook_edit);
+			this->PanelEditInfoBook->Controls->Add(this->PanelEditInfoBook_select);
+			this->PanelEditInfoBook->Location = System::Drawing::Point(784, 595);
+			this->PanelEditInfoBook->MaximumSize = System::Drawing::Size(780, 565);
+			this->PanelEditInfoBook->Name = L"PanelEditInfoBook";
+			this->PanelEditInfoBook->Size = System::Drawing::Size(780, 565);
+			this->PanelEditInfoBook->TabIndex = 2;
+			// 
+			// PanelEditInfoBook_edit
+			// 
+			this->PanelEditInfoBook_edit->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->PanelEditInfoBook_edit->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelEditInfoBook_edit->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelEditInfoBook_edit->Controls->Add(this->lEditInfoBook_edit_ID);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label32);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_release_data);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_creation_data);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_save);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label26);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label27);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label28);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label29);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label30);
+			this->PanelEditInfoBook_edit->Controls->Add(this->label31);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_count_page);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_ContextTextBox);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_AutorsTextBox);
+			this->PanelEditInfoBook_edit->Controls->Add(this->EditInfoBook_NameTextBox);
+			this->PanelEditInfoBook_edit->Location = System::Drawing::Point(0, 0);
+			this->PanelEditInfoBook_edit->Margin = System::Windows::Forms::Padding(0);
+			this->PanelEditInfoBook_edit->Name = L"PanelEditInfoBook_edit";
+			this->PanelEditInfoBook_edit->Size = System::Drawing::Size(0, 0);
+			this->PanelEditInfoBook_edit->TabIndex = 10;
+			// 
+			// lEditInfoBook_edit_ID
+			// 
+			this->lEditInfoBook_edit_ID->AutoSize = true;
+			this->lEditInfoBook_edit_ID->Location = System::Drawing::Point(590, 6);
+			this->lEditInfoBook_edit_ID->Name = L"lEditInfoBook_edit_ID";
+			this->lEditInfoBook_edit_ID->Size = System::Drawing::Size(0, 13);
+			this->lEditInfoBook_edit_ID->TabIndex = 101;
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Location = System::Drawing::Point(526, 6);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(57, 13);
+			this->label32->TabIndex = 100;
+			this->label32->Text = L"Книги ID: ";
+			// 
+			// EditInfoBook_release_data
+			// 
+			this->EditInfoBook_release_data->CalendarFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->EditInfoBook_release_data->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->EditInfoBook_release_data->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->EditInfoBook_release_data->Location = System::Drawing::Point(273, 216);
+			this->EditInfoBook_release_data->Name = L"EditInfoBook_release_data";
+			this->EditInfoBook_release_data->ShowUpDown = true;
+			this->EditInfoBook_release_data->Size = System::Drawing::Size(126, 29);
+			this->EditInfoBook_release_data->TabIndex = 4;
+			// 
+			// EditInfoBook_creation_data
+			// 
+			this->EditInfoBook_creation_data->CalendarFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->EditInfoBook_creation_data->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->EditInfoBook_creation_data->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->EditInfoBook_creation_data->Location = System::Drawing::Point(273, 181);
+			this->EditInfoBook_creation_data->Name = L"EditInfoBook_creation_data";
+			this->EditInfoBook_creation_data->ShowUpDown = true;
+			this->EditInfoBook_creation_data->Size = System::Drawing::Size(126, 29);
+			this->EditInfoBook_creation_data->TabIndex = 3;
+			// 
+			// EditInfoBook_save
+			// 
+			this->EditInfoBook_save->BackColor = System::Drawing::Color::NavajoWhite;
+			this->EditInfoBook_save->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->EditInfoBook_save->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->EditInfoBook_save->Location = System::Drawing::Point(0, -84);
+			this->EditInfoBook_save->Name = L"EditInfoBook_save";
+			this->EditInfoBook_save->Size = System::Drawing::Size(0, 84);
+			this->EditInfoBook_save->TabIndex = 6;
+			this->EditInfoBook_save->Text = L"Сохранить";
+			this->EditInfoBook_save->UseVisualStyleBackColor = false;
+			this->EditInfoBook_save->Click += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_save_Click);
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label26->Location = System::Drawing::Point(5, 251);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(262, 25);
+			this->label26->TabIndex = 99;
+			this->label26->Text = L"Кол-во страниц книги: ";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label27->Location = System::Drawing::Point(5, 217);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(237, 25);
+			this->label27->TabIndex = 99;
+			this->label27->Text = L"Дата выпуска книги:";
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label28->Location = System::Drawing::Point(5, 181);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(248, 25);
+			this->label28->TabIndex = 99;
+			this->label28->Text = L"Дата создания книги:";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label29->Location = System::Drawing::Point(5, 122);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(229, 25);
+			this->label29->TabIndex = 99;
+			this->label29->Text = L"Содержание книги: ";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label30->Location = System::Drawing::Point(5, 65);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(189, 25);
+			this->label30->TabIndex = 99;
+			this->label30->Text = L"Автор(ы) книги: ";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label31->Location = System::Drawing::Point(5, 5);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(198, 25);
+			this->label31->TabIndex = 99;
+			this->label31->Text = L"Название книги: ";
+			// 
+			// EditInfoBook_count_page
+			// 
+			this->EditInfoBook_count_page->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->EditInfoBook_count_page->Location = System::Drawing::Point(273, 247);
+			this->EditInfoBook_count_page->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 9999, 0, 0, 0 });
+			this->EditInfoBook_count_page->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->EditInfoBook_count_page->Name = L"EditInfoBook_count_page";
+			this->EditInfoBook_count_page->Size = System::Drawing::Size(126, 29);
+			this->EditInfoBook_count_page->TabIndex = 5;
+			this->EditInfoBook_count_page->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// EditInfoBook_ContextTextBox
+			// 
+			this->EditInfoBook_ContextTextBox->BackColor = System::Drawing::SystemColors::Window;
+			this->EditInfoBook_ContextTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->EditInfoBook_ContextTextBox->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->EditInfoBook_ContextTextBox->Location = System::Drawing::Point(10, 146);
+			this->EditInfoBook_ContextTextBox->MaxLength = 100;
+			this->EditInfoBook_ContextTextBox->Name = L"EditInfoBook_ContextTextBox";
+			this->EditInfoBook_ContextTextBox->Size = System::Drawing::Size(759, 29);
+			this->EditInfoBook_ContextTextBox->TabIndex = 2;
+			this->EditInfoBook_ContextTextBox->Text = L"Cодержание книги";
+			this->EditInfoBook_ContextTextBox->Enter += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_ContextTextBox_Enter);
+			this->EditInfoBook_ContextTextBox->Leave += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_ContextTextBox_Leave);
+			// 
+			// EditInfoBook_AutorsTextBox
+			// 
+			this->EditInfoBook_AutorsTextBox->BackColor = System::Drawing::SystemColors::Window;
+			this->EditInfoBook_AutorsTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->EditInfoBook_AutorsTextBox->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->EditInfoBook_AutorsTextBox->Location = System::Drawing::Point(10, 90);
+			this->EditInfoBook_AutorsTextBox->MaxLength = 100;
+			this->EditInfoBook_AutorsTextBox->Name = L"EditInfoBook_AutorsTextBox";
+			this->EditInfoBook_AutorsTextBox->Size = System::Drawing::Size(759, 29);
+			this->EditInfoBook_AutorsTextBox->TabIndex = 1;
+			this->EditInfoBook_AutorsTextBox->Text = L"Авторы книги";
+			this->EditInfoBook_AutorsTextBox->Enter += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_AutorsTextBox_Enter);
+			this->EditInfoBook_AutorsTextBox->Leave += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_AutorsTextBox_Leave);
+			// 
+			// EditInfoBook_NameTextBox
+			// 
+			this->EditInfoBook_NameTextBox->BackColor = System::Drawing::SystemColors::Window;
+			this->EditInfoBook_NameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->EditInfoBook_NameTextBox->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->EditInfoBook_NameTextBox->Location = System::Drawing::Point(10, 38);
+			this->EditInfoBook_NameTextBox->MaxLength = 100;
+			this->EditInfoBook_NameTextBox->Name = L"EditInfoBook_NameTextBox";
+			this->EditInfoBook_NameTextBox->Size = System::Drawing::Size(759, 29);
+			this->EditInfoBook_NameTextBox->TabIndex = 0;
+			this->EditInfoBook_NameTextBox->Text = L"Название книги";
+			this->EditInfoBook_NameTextBox->Enter += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_NameTextBox_Enter);
+			this->EditInfoBook_NameTextBox->Leave += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_NameTextBox_Leave);
+			// 
+			// PanelEditInfoBook_select
+			// 
+			this->PanelEditInfoBook_select->AutoSize = true;
+			this->PanelEditInfoBook_select->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelEditInfoBook_select->Controls->Add(this->EditInfoBook_dataGridView);
+			this->PanelEditInfoBook_select->Controls->Add(this->EditInfoBook_select_btn);
+			this->PanelEditInfoBook_select->Controls->Add(this->label25);
+			this->PanelEditInfoBook_select->Location = System::Drawing::Point(781, 559);
+			this->PanelEditInfoBook_select->Name = L"PanelEditInfoBook_select";
+			this->PanelEditInfoBook_select->Size = System::Drawing::Size(778, 563);
+			this->PanelEditInfoBook_select->TabIndex = 9;
+			// 
+			// EditInfoBook_dataGridView
+			// 
+			this->EditInfoBook_dataGridView->AllowUserToAddRows = false;
+			this->EditInfoBook_dataGridView->AllowUserToDeleteRows = false;
+			this->EditInfoBook_dataGridView->AllowUserToResizeColumns = false;
+			this->EditInfoBook_dataGridView->AllowUserToResizeRows = false;
+			this->EditInfoBook_dataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->EditInfoBook_dataGridView->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->EditInfoBook_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->EditInfoBook_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->EditInfoBook_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditInfoBook_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this->EditInfoBook_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->EditInfoBook_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->EditInfoBook_dataGridView->Location = System::Drawing::Point(0, 26);
+			this->EditInfoBook_dataGridView->Margin = System::Windows::Forms::Padding(20);
+			this->EditInfoBook_dataGridView->MaximumSize = System::Drawing::Size(781, 474);
+			this->EditInfoBook_dataGridView->MinimumSize = System::Drawing::Size(781, 374);
+			this->EditInfoBook_dataGridView->Name = L"EditInfoBook_dataGridView";
+			this->EditInfoBook_dataGridView->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->EditInfoBook_dataGridView->Size = System::Drawing::Size(781, 400);
+			this->EditInfoBook_dataGridView->StandardTab = true;
+			this->EditInfoBook_dataGridView->TabIndex = 10;
+			// 
+			// EditInfoBook_select_btn
+			// 
+			this->EditInfoBook_select_btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->EditInfoBook_select_btn->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->EditInfoBook_select_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->EditInfoBook_select_btn->Location = System::Drawing::Point(0, 426);
+			this->EditInfoBook_select_btn->Name = L"EditInfoBook_select_btn";
+			this->EditInfoBook_select_btn->Size = System::Drawing::Size(778, 137);
+			this->EditInfoBook_select_btn->TabIndex = 9;
+			this->EditInfoBook_select_btn->Text = L"Выбрать";
+			this->EditInfoBook_select_btn->UseVisualStyleBackColor = false;
+			this->EditInfoBook_select_btn->Click += gcnew System::EventHandler(this, &LK_admin::EditInfoBook_select_btn_Click);
+			// 
+			// label25
+			// 
+			this->label25->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Impact", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label25->Location = System::Drawing::Point(0, 0);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(778, 26);
+			this->label25->TabIndex = 1;
+			this->label25->Text = L"Выберите книгу, которую нужно изменить ";
+			this->label25->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
 			// PanelEditDataUsers
 			// 
 			this->PanelEditDataUsers->BackColor = System::Drawing::Color::BurlyWood;
 			this->PanelEditDataUsers->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->PanelEditDataUsers->Controls->Add(this->EditDataUsers_panel_select);
 			this->PanelEditDataUsers->Controls->Add(this->EditDataUsers_panel_EditUser);
-			this->PanelEditDataUsers->Location = System::Drawing::Point(11, 41);
+			this->PanelEditDataUsers->Location = System::Drawing::Point(10, 5);
 			this->PanelEditDataUsers->MaximumSize = System::Drawing::Size(780, 565);
 			this->PanelEditDataUsers->Name = L"PanelEditDataUsers";
 			this->PanelEditDataUsers->Size = System::Drawing::Size(0, 0);
@@ -740,15 +1120,15 @@ private: System::Windows::Forms::Label^ label24;
 			this->EditDataUsers_panel_select_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->EditDataUsers_panel_select_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->EditDataUsers_panel_select_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->EditDataUsers_panel_select_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->EditDataUsers_panel_select_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->EditDataUsers_panel_select_dataGridView->Location = System::Drawing::Point(0, 26);
@@ -1012,26 +1392,6 @@ private: System::Windows::Forms::Label^ label24;
 			this->EditDataUsers_panel_Edit_btn_save->UseVisualStyleBackColor = false;
 			this->EditDataUsers_panel_Edit_btn_save->Click += gcnew System::EventHandler(this, &LK_admin::EditDataUsers_panel_Edit_btn_save_Click);
 			// 
-			// PanelSearch
-			// 
-			this->PanelSearch->BackColor = System::Drawing::Color::BurlyWood;
-			this->PanelSearch->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->PanelSearch->Location = System::Drawing::Point(701, 253);
-			this->PanelSearch->MaximumSize = System::Drawing::Size(780, 565);
-			this->PanelSearch->Name = L"PanelSearch";
-			this->PanelSearch->Size = System::Drawing::Size(200, 100);
-			this->PanelSearch->TabIndex = 6;
-			// 
-			// PanelEditInfoBook
-			// 
-			this->PanelEditInfoBook->BackColor = System::Drawing::Color::BurlyWood;
-			this->PanelEditInfoBook->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->PanelEditInfoBook->Location = System::Drawing::Point(701, 465);
-			this->PanelEditInfoBook->MaximumSize = System::Drawing::Size(780, 565);
-			this->PanelEditInfoBook->Name = L"PanelEditInfoBook";
-			this->PanelEditInfoBook->Size = System::Drawing::Size(200, 100);
-			this->PanelEditInfoBook->TabIndex = 2;
-			// 
 			// PanelRegNewBook
 			// 
 			this->PanelRegNewBook->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
@@ -1050,7 +1410,7 @@ private: System::Windows::Forms::Label^ label24;
 			this->PanelRegNewBook->Controls->Add(this->ContextTextBox);
 			this->PanelRegNewBook->Controls->Add(this->AutorsTextBox);
 			this->PanelRegNewBook->Controls->Add(this->NameTextBox);
-			this->PanelRegNewBook->Location = System::Drawing::Point(0, 35);
+			this->PanelRegNewBook->Location = System::Drawing::Point(8, 56);
 			this->PanelRegNewBook->Margin = System::Windows::Forms::Padding(0);
 			this->PanelRegNewBook->Name = L"PanelRegNewBook";
 			this->PanelRegNewBook->Size = System::Drawing::Size(0, 0);
@@ -1261,6 +1621,13 @@ private: System::Windows::Forms::Label^ label24;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->EndInit();
 			this->PanelRegUser->ResumeLayout(false);
 			this->PanelRegUser->PerformLayout();
+			this->PanelEditInfoBook->ResumeLayout(false);
+			this->PanelEditInfoBook->PerformLayout();
+			this->PanelEditInfoBook_edit->ResumeLayout(false);
+			this->PanelEditInfoBook_edit->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditInfoBook_count_page))->EndInit();
+			this->PanelEditInfoBook_select->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditInfoBook_dataGridView))->EndInit();
 			this->PanelEditDataUsers->ResumeLayout(false);
 			this->EditDataUsers_panel_select->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditDataUsers_panel_select_dataGridView))->EndInit();
@@ -1315,5 +1682,13 @@ private: System::Windows::Forms::Label^ label24;
 			System::Void EditDataUsers_panel_EditUser_patronymic_Leave(System::Object^ sender, System::EventArgs^ e);
 			System::Void EditDataUsers_panel_EditUser_login_Leave(System::Object^ sender, System::EventArgs^ e);
 			System::Void EditDataUsers_panel_EditUser_pass_Leave(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_select_btn_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_save_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_NameTextBox_Enter(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_NameTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_AutorsTextBox_Enter(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_AutorsTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
+			System::Void EditInfoBook_ContextTextBox_Enter(System::Object^ sender, System::EventArgs^ e); 
+			System::Void EditInfoBook_ContextTextBox_Leave(System::Object^ sender, System::EventArgs^ e); 
 };
 }
