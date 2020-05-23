@@ -367,10 +367,9 @@ deque<User> get_deque_users()
 	return users;
 }
 
-UserBook get_deque_books_back_returned()
+deque <UserBook> get_deque_books_taken()
 {
-	UserBook ub;
-
+	deque<UserBook> ub;
 	SQLiteConnection^ db = gcnew SQLiteConnection();
 	try
 	{
@@ -381,14 +380,13 @@ UserBook get_deque_books_back_returned()
 		{
 			SQLiteCommand^ cmdSelect = db->CreateCommand();
 			//SQL запрос
-			cmdSelect->CommandText = "SELECT * FROM books_back_returned;";
+			cmdSelect->CommandText = "SELECT * FROM books_taken;";
 			SQLiteDataReader^ reader = cmdSelect->ExecuteReader();
 			//В sb будем записывать
 			String^ sb;
 			//Пробегаем по каждой записи
 			int Counter = 1;
-			Book b1;
-			User u1;
+			UserBook ub1;
 			while (reader->Read()) {
 				//В каждой записи пробегаем по всем столбцам
 				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr) {
@@ -397,13 +395,11 @@ UserBook get_deque_books_back_returned()
 					string stdSb = CastStrSystemToStd(sb->ToString());
 					switch (Counter)
 					{
-					case 1: {b1.set_id_book(atoi(stdSb.c_str()));	 Counter++; break; }
-					case 2: {u1.set_id(atoi(stdSb.c_str()));		 Counter++; break; }
-					case 3: {b1.set_user_took_the_book_date(stdSb);	 Counter=1; break; }
+					case 1: {ub1.Book = atoi(stdSb.c_str());	 Counter++; break; }
+					case 2: {ub1.User = atoi(stdSb.c_str());	 Counter=1; break; }
 					}
 				}
-				ub.Book.push_back(b1);
-				ub.User.push_back(u1);
+				ub.push_back(ub1);
 			}
 			//Выводим результат
 			//Msg(books.size, "Инфо", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -421,58 +417,54 @@ UserBook get_deque_books_back_returned()
 	return ub;
 }
 
-UserBook get_deque_books_taken()
+deque<Book> get_deque_author_from_books(string Author)
 {
-	UserBook ub;
+	deque<Book> books;
+	deque<Book> bks = get_deque_books();
+	for (Book book : bks)
+	{
+		if (book.get_authors() == Author)
+		{
+			books.push_back(book);
+		}
+	}
+	return books;
+}
 
-	SQLiteConnection^ db = gcnew SQLiteConnection();
-	try
+deque<Book> get_deque_reader_from_books(string Reader)
+{
+	deque<Book> books;
+	deque<Book> bks = get_deque_books();
+
+	// Узнаём ID Reader
+	int id;
+	deque<User> Users = get_deque_users();
+	for (User User : Users)
 	{
-		string ConStr = "Data Source=\"" + string(path_db) + "\"";
-		db->ConnectionString = gcnew System::String(ConStr.c_str());
-		db->Open();
-		try
+		if (User.get_surname() == Reader)
 		{
-			SQLiteCommand^ cmdSelect = db->CreateCommand();
-			//SQL запрос
-			cmdSelect->CommandText = "SELECT * FROM books_taken;";
-			SQLiteDataReader^ reader = cmdSelect->ExecuteReader();
-			//В sb будем записывать
-			String^ sb;
-			//Пробегаем по каждой записи
-			int Counter = 1;
-			Book b1;
-			User u1;
-			while (reader->Read()) {
-				//В каждой записи пробегаем по всем столбцам
-				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr) {
-					//Добавлем значение столбца в sb
-					sb = reader->GetValue(colCtr)->ToString();
-					string stdSb = CastStrSystemToStd(sb->ToString());
-					switch (Counter)
-					{
-					case 1: {b1.set_id_book(atoi(stdSb.c_str()));	 Counter++; break; }
-					case 2: {u1.set_id(atoi(stdSb.c_str()));		 Counter++; break; }
-					case 3: {b1.set_user_took_the_book_date(stdSb);	 Counter = 1; break; }
-					}
+			id = User.get_id();
+			break;
+		}
+	}
+	Users.clear();
+	// Заполняем передаваемый дек
+	deque<UserBook> UBs = get_deque_books_taken();
+	for (UserBook ub: UBs)
+	{
+		if (ub.User == id)
+		{
+			for (Book book : bks)
+			{
+				if (book.get_id_book() == ub.Book)
+				{
+					books.push_back(book);
 				}
-				ub.Book.push_back(b1);
-				ub.User.push_back(u1);
 			}
-			//Выводим результат
-			//Msg(books.size, "Инфо", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
-		catch (Exception^ e)
-		{
-			Msg("Error Executing SQL: " + e->ToString(), "Exception While Displaying MyTable ...");
-		}
-		db->Close();
 	}
-	finally
-	{
-		delete (IDisposable^)db;
-	}
-	return ub;
+
+	return books;
 }
 
 int get_access_user(int id)
@@ -523,6 +515,37 @@ int get_access_user(int id)
 	{
 		delete (IDisposable^)db;
 	}
+}
+
+int get_count_books_authors(string FindAuthor)
+{
+	int count = 0;
+	deque<Book> books = get_deque_books();
+	for (Book book : books)
+	{
+		if (book.get_authors() == FindAuthor)
+		{
+			count++;
+		}
+	}
+	return count;
+}
+
+int get_count_taken_books_authors(string FindAuthor)
+{
+	int count = 0;
+	deque<Book> books = get_deque_books();
+	deque <UserBook> UBs = get_deque_books_taken();
+	for (Book book : books)
+	{
+		if (book.get_authors() == FindAuthor)
+		{
+			for(UserBook ub : UBs)
+				if(ub.Book == book.get_id_book())
+					count++;
+		}
+	}
+	return count;
 }
 
 UserInfo validation_login(string login, string pass)

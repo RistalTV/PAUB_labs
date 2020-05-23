@@ -25,8 +25,8 @@ using namespace System::Data::SQLite;
 	// Структура состоящий из 2 дэков
 	struct UserBook
 	{
-		deque<User> User;
-		deque<Book> Book;
+		int User;
+		int Book;
 	};
 	// Структура которою передают на входе
 	struct UserInfo
@@ -60,18 +60,24 @@ using namespace System::Data::SQLite;
 	int delete_from_books_taken(Book book, User user);
 
 // =============================================
-// Функции получения данных из талиц дб
+// Функции получения данных из таблиц дб
 
-	// Получение данных из талицы books
+	// Получение данных из таблицы books
 	deque<Book> get_deque_books();
-	// Получение данных из талицы users 
+	// Получение данных из таблицы users 
 	deque<User> get_deque_users();
-	// Получение данных из талицы books_back_returned
-	UserBook get_deque_books_back_returned();
-	// Получение данных из талицы books_taken
-	UserBook get_deque_books_taken();
+	// Получение данных из таблицы books_taken
+	deque <UserBook> get_deque_books_taken();
+	// Получение данных из таблицы books
+	deque<Book> get_deque_author_from_books(string Author);
+	// Получение данных из таблицы books
+	deque<Book> get_deque_reader_from_books(string Reader);
 	// Получение уровня доступа
 	int get_access_user(int id);
+	// Кол-во книг автора по имени
+	int get_count_books_authors(string FindAuthor);
+	// Кол-во выданных книг автора по имени
+	int get_count_taken_books_authors(string FindAuthor);
 
 // =============================================
 // Функции валидации

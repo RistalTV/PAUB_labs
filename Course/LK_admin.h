@@ -171,6 +171,39 @@ public: System::Windows::Forms::TextBox^ EditInfoBook_ContextTextBox;
 public: System::Windows::Forms::TextBox^ EditInfoBook_AutorsTextBox;
 
 public: System::Windows::Forms::TextBox^ EditInfoBook_NameTextBox;
+private: System::Windows::Forms::Panel^ Search_Find_from_authors;
+public:
+
+public:
+private: System::Windows::Forms::Panel^ Search_Buttons;
+private: System::Windows::Forms::Panel^ Search_Find_from_reader;
+public: System::Windows::Forms::Button^ ViewListAllBooksAndAllUsers;
+public: System::Windows::Forms::Button^ Search_Buttons_find_from_authors;
+private:
+
+public: System::Windows::Forms::Button^ Search_Buttons_find_from_reader;
+
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label34;
+public: System::Windows::Forms::DataGridView^ Search_Find_from_authors_Grid_Search;
+private:
+public: System::Windows::Forms::DataGridView^ Search_Find_from_authors_Grid_Authors;
+public: System::Windows::Forms::Button^ Search_Find_from_authors_btn;
+
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ Search_Find_from_authors_Count_taken;
+private: System::Windows::Forms::Label^ Search_Find_from_authors_Count_All;
+private: System::Windows::Forms::Label^ label37;
+public: System::Windows::Forms::DataGridView^ Search_Find_from_reader_Grid_Select;
+private:
+public: System::Windows::Forms::DataGridView^ Search_Find_from_reader_Grid_name;
+public: System::Windows::Forms::Button^ Search_Find_from_reader_btn;
+public:
+public:
+
+private:
+
 
 public:
 
@@ -218,10 +251,15 @@ private:
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->MainPanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->MainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->upMainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->ViewListAllBooksAndAllUsers = (gcnew System::Windows::Forms::Button());
 			this->Search = (gcnew System::Windows::Forms::Button());
 			this->RegUser = (gcnew System::Windows::Forms::Button());
 			this->EditDataUsers = (gcnew System::Windows::Forms::Button());
@@ -253,6 +291,24 @@ private:
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->PanelSearch = (gcnew System::Windows::Forms::Panel());
+			this->Search_Find_from_reader = (gcnew System::Windows::Forms::Panel());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->Search_Find_from_reader_Grid_Select = (gcnew System::Windows::Forms::DataGridView());
+			this->Search_Find_from_reader_Grid_name = (gcnew System::Windows::Forms::DataGridView());
+			this->Search_Find_from_reader_btn = (gcnew System::Windows::Forms::Button());
+			this->Search_Find_from_authors = (gcnew System::Windows::Forms::Panel());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->Search_Find_from_authors_Count_taken = (gcnew System::Windows::Forms::Label());
+			this->Search_Find_from_authors_Count_All = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->Search_Find_from_authors_Grid_Search = (gcnew System::Windows::Forms::DataGridView());
+			this->Search_Find_from_authors_Grid_Authors = (gcnew System::Windows::Forms::DataGridView());
+			this->Search_Find_from_authors_btn = (gcnew System::Windows::Forms::Button());
+			this->Search_Buttons = (gcnew System::Windows::Forms::Panel());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->Search_Buttons_find_from_authors = (gcnew System::Windows::Forms::Button());
+			this->Search_Buttons_find_from_reader = (gcnew System::Windows::Forms::Button());
 			this->PanelEditInfoBook = (gcnew System::Windows::Forms::Panel());
 			this->PanelEditInfoBook_edit = (gcnew System::Windows::Forms::Panel());
 			this->lEditInfoBook_edit_ID = (gcnew System::Windows::Forms::Label());
@@ -322,6 +378,14 @@ private:
 			this->PanelDeleteBook->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->BeginInit();
 			this->PanelRegUser->SuspendLayout();
+			this->PanelSearch->SuspendLayout();
+			this->Search_Find_from_reader->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_reader_Grid_Select))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_reader_Grid_name))->BeginInit();
+			this->Search_Find_from_authors->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_authors_Grid_Search))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_authors_Grid_Authors))->BeginInit();
+			this->Search_Buttons->SuspendLayout();
 			this->PanelEditInfoBook->SuspendLayout();
 			this->PanelEditInfoBook_edit->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EditInfoBook_count_page))->BeginInit();
@@ -353,6 +417,7 @@ private:
 			// 
 			this->MainLeftPanel->BackColor = System::Drawing::Color::Peru;
 			this->MainLeftPanel->Controls->Add(this->upMainLeftPanel);
+			this->MainLeftPanel->Controls->Add(this->ViewListAllBooksAndAllUsers);
 			this->MainLeftPanel->Controls->Add(this->Search);
 			this->MainLeftPanel->Controls->Add(this->RegUser);
 			this->MainLeftPanel->Controls->Add(this->EditDataUsers);
@@ -389,6 +454,19 @@ private:
 			this->label1->Size = System::Drawing::Size(152, 46);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"               Меню \r\nадминистратора";
+			// 
+			// ViewListAllBooksAndAllUsers
+			// 
+			this->ViewListAllBooksAndAllUsers->BackColor = System::Drawing::Color::NavajoWhite;
+			this->ViewListAllBooksAndAllUsers->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->ViewListAllBooksAndAllUsers->Location = System::Drawing::Point(10, 398);
+			this->ViewListAllBooksAndAllUsers->Name = L"ViewListAllBooksAndAllUsers";
+			this->ViewListAllBooksAndAllUsers->Size = System::Drawing::Size(180, 78);
+			this->ViewListAllBooksAndAllUsers->TabIndex = 0;
+			this->ViewListAllBooksAndAllUsers->Text = L"• Показать  общий список выданных книг и кому они выданы";
+			this->ViewListAllBooksAndAllUsers->UseVisualStyleBackColor = false;
+			this->ViewListAllBooksAndAllUsers->Click += gcnew System::EventHandler(this, &LK_admin::Search_Click);
 			// 
 			// Search
 			// 
@@ -795,11 +873,315 @@ private:
 			// 
 			this->PanelSearch->BackColor = System::Drawing::Color::BurlyWood;
 			this->PanelSearch->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->PanelSearch->Location = System::Drawing::Point(701, 253);
+			this->PanelSearch->Controls->Add(this->Search_Find_from_reader);
+			this->PanelSearch->Controls->Add(this->Search_Find_from_authors);
+			this->PanelSearch->Controls->Add(this->Search_Buttons);
+			this->PanelSearch->Location = System::Drawing::Point(763, 607);
 			this->PanelSearch->MaximumSize = System::Drawing::Size(780, 565);
 			this->PanelSearch->Name = L"PanelSearch";
-			this->PanelSearch->Size = System::Drawing::Size(200, 100);
+			this->PanelSearch->Size = System::Drawing::Size(780, 565);
 			this->PanelSearch->TabIndex = 6;
+			// 
+			// Search_Find_from_reader
+			// 
+			this->Search_Find_from_reader->Controls->Add(this->label37);
+			this->Search_Find_from_reader->Controls->Add(this->Search_Find_from_reader_Grid_Select);
+			this->Search_Find_from_reader->Controls->Add(this->Search_Find_from_reader_Grid_name);
+			this->Search_Find_from_reader->Controls->Add(this->Search_Find_from_reader_btn);
+			this->Search_Find_from_reader->Location = System::Drawing::Point(766, 571);
+			this->Search_Find_from_reader->MaximumSize = System::Drawing::Size(780, 565);
+			this->Search_Find_from_reader->Name = L"Search_Find_from_reader";
+			this->Search_Find_from_reader->Size = System::Drawing::Size(778, 563);
+			this->Search_Find_from_reader->TabIndex = 0;
+			// 
+			// label37
+			// 
+			this->label37->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label37->ImageAlign = System::Drawing::ContentAlignment::BottomRight;
+			this->label37->Location = System::Drawing::Point(0, 0);
+			this->label37->MaximumSize = System::Drawing::Size(180, 72);
+			this->label37->MinimumSize = System::Drawing::Size(180, 72);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(180, 72);
+			this->label37->TabIndex = 16;
+			this->label37->Text = L"Выберите фамилию";
+			this->label37->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
+			// 
+			// Search_Find_from_reader_Grid_Select
+			// 
+			this->Search_Find_from_reader_Grid_Select->AllowUserToAddRows = false;
+			this->Search_Find_from_reader_Grid_Select->AllowUserToDeleteRows = false;
+			this->Search_Find_from_reader_Grid_Select->AllowUserToResizeColumns = false;
+			this->Search_Find_from_reader_Grid_Select->AllowUserToResizeRows = false;
+			this->Search_Find_from_reader_Grid_Select->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->Search_Find_from_reader_Grid_Select->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_reader_Grid_Select->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->Search_Find_from_reader_Grid_Select->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->Search_Find_from_reader_Grid_Select->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_reader_Grid_Select->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this->Search_Find_from_reader_Grid_Select->Dock = System::Windows::Forms::DockStyle::Right;
+			this->Search_Find_from_reader_Grid_Select->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->Search_Find_from_reader_Grid_Select->Location = System::Drawing::Point(185, 0);
+			this->Search_Find_from_reader_Grid_Select->Margin = System::Windows::Forms::Padding(20);
+			this->Search_Find_from_reader_Grid_Select->MaximumSize = System::Drawing::Size(593, 553);
+			this->Search_Find_from_reader_Grid_Select->Name = L"Search_Find_from_reader_Grid_Select";
+			this->Search_Find_from_reader_Grid_Select->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->Search_Find_from_reader_Grid_Select->Size = System::Drawing::Size(593, 553);
+			this->Search_Find_from_reader_Grid_Select->StandardTab = true;
+			this->Search_Find_from_reader_Grid_Select->TabIndex = 14;
+			// 
+			// Search_Find_from_reader_Grid_name
+			// 
+			this->Search_Find_from_reader_Grid_name->AllowUserToAddRows = false;
+			this->Search_Find_from_reader_Grid_name->AllowUserToDeleteRows = false;
+			this->Search_Find_from_reader_Grid_name->AllowUserToResizeColumns = false;
+			this->Search_Find_from_reader_Grid_name->AllowUserToResizeRows = false;
+			this->Search_Find_from_reader_Grid_name->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->Search_Find_from_reader_Grid_name->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->Search_Find_from_reader_Grid_name->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_reader_Grid_name->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->Search_Find_from_reader_Grid_name->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->Search_Find_from_reader_Grid_name->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_reader_Grid_name->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			this->Search_Find_from_reader_Grid_name->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->Search_Find_from_reader_Grid_name->Location = System::Drawing::Point(0, 76);
+			this->Search_Find_from_reader_Grid_name->Margin = System::Windows::Forms::Padding(20);
+			this->Search_Find_from_reader_Grid_name->MaximumSize = System::Drawing::Size(180, 430);
+			this->Search_Find_from_reader_Grid_name->MinimumSize = System::Drawing::Size(180, 430);
+			this->Search_Find_from_reader_Grid_name->Name = L"Search_Find_from_reader_Grid_name";
+			this->Search_Find_from_reader_Grid_name->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->Search_Find_from_reader_Grid_name->Size = System::Drawing::Size(180, 430);
+			this->Search_Find_from_reader_Grid_name->StandardTab = true;
+			this->Search_Find_from_reader_Grid_name->TabIndex = 15;
+			// 
+			// Search_Find_from_reader_btn
+			// 
+			this->Search_Find_from_reader_btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_reader_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Search_Find_from_reader_btn->Location = System::Drawing::Point(1, 508);
+			this->Search_Find_from_reader_btn->Name = L"Search_Find_from_reader_btn";
+			this->Search_Find_from_reader_btn->Size = System::Drawing::Size(180, 50);
+			this->Search_Find_from_reader_btn->TabIndex = 13;
+			this->Search_Find_from_reader_btn->Text = L"Выбрать";
+			this->Search_Find_from_reader_btn->UseVisualStyleBackColor = false;
+			this->Search_Find_from_reader_btn->Click += gcnew System::EventHandler(this, &LK_admin::Search_Find_from_reader_btn_Click);
+			// 
+			// Search_Find_from_authors
+			// 
+			this->Search_Find_from_authors->Controls->Add(this->label36);
+			this->Search_Find_from_authors->Controls->Add(this->Search_Find_from_authors_Count_taken);
+			this->Search_Find_from_authors->Controls->Add(this->Search_Find_from_authors_Count_All);
+			this->Search_Find_from_authors->Controls->Add(this->label35);
+			this->Search_Find_from_authors->Controls->Add(this->label34);
+			this->Search_Find_from_authors->Controls->Add(this->Search_Find_from_authors_Grid_Search);
+			this->Search_Find_from_authors->Controls->Add(this->Search_Find_from_authors_Grid_Authors);
+			this->Search_Find_from_authors->Controls->Add(this->Search_Find_from_authors_btn);
+			this->Search_Find_from_authors->Location = System::Drawing::Point(775, 558);
+			this->Search_Find_from_authors->MaximumSize = System::Drawing::Size(780, 565);
+			this->Search_Find_from_authors->Name = L"Search_Find_from_authors";
+			this->Search_Find_from_authors->Size = System::Drawing::Size(778, 563);
+			this->Search_Find_from_authors->TabIndex = 0;
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label36->Location = System::Drawing::Point(186, 531);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(455, 25);
+			this->label36->TabIndex = 13;
+			this->label36->Text = L"Общее количества выданных экземпляров: ";
+			// 
+			// Search_Find_from_authors_Count_taken
+			// 
+			this->Search_Find_from_authors_Count_taken->AutoSize = true;
+			this->Search_Find_from_authors_Count_taken->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Search_Find_from_authors_Count_taken->Location = System::Drawing::Point(635, 533);
+			this->Search_Find_from_authors_Count_taken->Name = L"Search_Find_from_authors_Count_taken";
+			this->Search_Find_from_authors_Count_taken->Size = System::Drawing::Size(24, 25);
+			this->Search_Find_from_authors_Count_taken->TabIndex = 13;
+			this->Search_Find_from_authors_Count_taken->Text = L"_";
+			// 
+			// Search_Find_from_authors_Count_All
+			// 
+			this->Search_Find_from_authors_Count_All->AutoSize = true;
+			this->Search_Find_from_authors_Count_All->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Search_Find_from_authors_Count_All->Location = System::Drawing::Point(533, 506);
+			this->Search_Find_from_authors_Count_All->Name = L"Search_Find_from_authors_Count_All";
+			this->Search_Find_from_authors_Count_All->Size = System::Drawing::Size(24, 25);
+			this->Search_Find_from_authors_Count_All->TabIndex = 13;
+			this->Search_Find_from_authors_Count_All->Text = L"_";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label35->Location = System::Drawing::Point(186, 503);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(355, 25);
+			this->label35->TabIndex = 13;
+			this->label35->Text = L"Общее количество экземпляров : ";
+			// 
+			// label34
+			// 
+			this->label34->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label34->ImageAlign = System::Drawing::ContentAlignment::BottomRight;
+			this->label34->Location = System::Drawing::Point(0, 0);
+			this->label34->MaximumSize = System::Drawing::Size(180, 72);
+			this->label34->MinimumSize = System::Drawing::Size(180, 72);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(180, 72);
+			this->label34->TabIndex = 12;
+			this->label34->Text = L"Выберите фамилию";
+			this->label34->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
+			// 
+			// Search_Find_from_authors_Grid_Search
+			// 
+			this->Search_Find_from_authors_Grid_Search->AllowUserToAddRows = false;
+			this->Search_Find_from_authors_Grid_Search->AllowUserToDeleteRows = false;
+			this->Search_Find_from_authors_Grid_Search->AllowUserToResizeColumns = false;
+			this->Search_Find_from_authors_Grid_Search->AllowUserToResizeRows = false;
+			this->Search_Find_from_authors_Grid_Search->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->Search_Find_from_authors_Grid_Search->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_authors_Grid_Search->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->Search_Find_from_authors_Grid_Search->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->Search_Find_from_authors_Grid_Search->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_authors_Grid_Search->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this->Search_Find_from_authors_Grid_Search->Dock = System::Windows::Forms::DockStyle::Right;
+			this->Search_Find_from_authors_Grid_Search->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->Search_Find_from_authors_Grid_Search->Location = System::Drawing::Point(185, 0);
+			this->Search_Find_from_authors_Grid_Search->Margin = System::Windows::Forms::Padding(20);
+			this->Search_Find_from_authors_Grid_Search->MaximumSize = System::Drawing::Size(593, 503);
+			this->Search_Find_from_authors_Grid_Search->Name = L"Search_Find_from_authors_Grid_Search";
+			this->Search_Find_from_authors_Grid_Search->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->Search_Find_from_authors_Grid_Search->Size = System::Drawing::Size(593, 503);
+			this->Search_Find_from_authors_Grid_Search->StandardTab = true;
+			this->Search_Find_from_authors_Grid_Search->TabIndex = 11;
+			// 
+			// Search_Find_from_authors_Grid_Authors
+			// 
+			this->Search_Find_from_authors_Grid_Authors->AllowUserToAddRows = false;
+			this->Search_Find_from_authors_Grid_Authors->AllowUserToDeleteRows = false;
+			this->Search_Find_from_authors_Grid_Authors->AllowUserToResizeColumns = false;
+			this->Search_Find_from_authors_Grid_Authors->AllowUserToResizeRows = false;
+			this->Search_Find_from_authors_Grid_Authors->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->Search_Find_from_authors_Grid_Authors->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->Search_Find_from_authors_Grid_Authors->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_authors_Grid_Authors->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->Search_Find_from_authors_Grid_Authors->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->Search_Find_from_authors_Grid_Authors->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_authors_Grid_Authors->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			this->Search_Find_from_authors_Grid_Authors->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->Search_Find_from_authors_Grid_Authors->Location = System::Drawing::Point(-1, 71);
+			this->Search_Find_from_authors_Grid_Authors->Margin = System::Windows::Forms::Padding(20);
+			this->Search_Find_from_authors_Grid_Authors->MaximumSize = System::Drawing::Size(180, 430);
+			this->Search_Find_from_authors_Grid_Authors->MinimumSize = System::Drawing::Size(180, 430);
+			this->Search_Find_from_authors_Grid_Authors->Name = L"Search_Find_from_authors_Grid_Authors";
+			this->Search_Find_from_authors_Grid_Authors->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->Search_Find_from_authors_Grid_Authors->Size = System::Drawing::Size(180, 430);
+			this->Search_Find_from_authors_Grid_Authors->StandardTab = true;
+			this->Search_Find_from_authors_Grid_Authors->TabIndex = 11;
+			// 
+			// Search_Find_from_authors_btn
+			// 
+			this->Search_Find_from_authors_btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Find_from_authors_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Search_Find_from_authors_btn->Location = System::Drawing::Point(0, 503);
+			this->Search_Find_from_authors_btn->Name = L"Search_Find_from_authors_btn";
+			this->Search_Find_from_authors_btn->Size = System::Drawing::Size(180, 50);
+			this->Search_Find_from_authors_btn->TabIndex = 0;
+			this->Search_Find_from_authors_btn->Text = L"Выбрать";
+			this->Search_Find_from_authors_btn->UseVisualStyleBackColor = false;
+			this->Search_Find_from_authors_btn->Click += gcnew System::EventHandler(this, &LK_admin::Search_Find_from_authors_btn_Click);
+			// 
+			// Search_Buttons
+			// 
+			this->Search_Buttons->Controls->Add(this->label33);
+			this->Search_Buttons->Controls->Add(this->Search_Buttons_find_from_authors);
+			this->Search_Buttons->Controls->Add(this->Search_Buttons_find_from_reader);
+			this->Search_Buttons->Location = System::Drawing::Point(781, 553);
+			this->Search_Buttons->MaximumSize = System::Drawing::Size(780, 565);
+			this->Search_Buttons->Name = L"Search_Buttons";
+			this->Search_Buttons->Size = System::Drawing::Size(778, 563);
+			this->Search_Buttons->TabIndex = 0;
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label33->Location = System::Drawing::Point(161, 107);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(447, 37);
+			this->label33->TabIndex = 3;
+			this->label33->Text = L"Нажмите на одну из кнопок:";
+			// 
+			// Search_Buttons_find_from_authors
+			// 
+			this->Search_Buttons_find_from_authors->BackColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Buttons_find_from_authors->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold));
+			this->Search_Buttons_find_from_authors->Location = System::Drawing::Point(398, 200);
+			this->Search_Buttons_find_from_authors->Name = L"Search_Buttons_find_from_authors";
+			this->Search_Buttons_find_from_authors->Size = System::Drawing::Size(371, 182);
+			this->Search_Buttons_find_from_authors->TabIndex = 2;
+			this->Search_Buttons_find_from_authors->Text = L"• Показать список книг по фамилии автора";
+			this->Search_Buttons_find_from_authors->UseVisualStyleBackColor = false;
+			this->Search_Buttons_find_from_authors->Click += gcnew System::EventHandler(this, &LK_admin::Search_Buttons_find_from_authors_Click);
+			// 
+			// Search_Buttons_find_from_reader
+			// 
+			this->Search_Buttons_find_from_reader->BackColor = System::Drawing::Color::NavajoWhite;
+			this->Search_Buttons_find_from_reader->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Search_Buttons_find_from_reader->Location = System::Drawing::Point(9, 199);
+			this->Search_Buttons_find_from_reader->Name = L"Search_Buttons_find_from_reader";
+			this->Search_Buttons_find_from_reader->Size = System::Drawing::Size(376, 182);
+			this->Search_Buttons_find_from_reader->TabIndex = 1;
+			this->Search_Buttons_find_from_reader->Text = L"• Показать  список выданных книг по фамилии читателя";
+			this->Search_Buttons_find_from_reader->UseVisualStyleBackColor = false;
+			this->Search_Buttons_find_from_reader->Click += gcnew System::EventHandler(this, &LK_admin::Search_Buttons_find_from_reader_Click);
 			// 
 			// PanelEditInfoBook
 			// 
@@ -1038,15 +1420,15 @@ private:
 			this->EditInfoBook_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->EditInfoBook_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->EditInfoBook_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->EditInfoBook_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditInfoBook_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this->EditInfoBook_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->EditInfoBook_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->EditInfoBook_dataGridView->Location = System::Drawing::Point(0, 26);
@@ -1103,7 +1485,7 @@ private:
 			this->EditDataUsers_panel_select->Controls->Add(this->EditDataUsers_panel_select_dataGridView);
 			this->EditDataUsers_panel_select->Controls->Add(this->EditDataUsers_panel_select_btn);
 			this->EditDataUsers_panel_select->Controls->Add(this->label16);
-			this->EditDataUsers_panel_select->Location = System::Drawing::Point(772, 561);
+			this->EditDataUsers_panel_select->Location = System::Drawing::Point(785, 575);
 			this->EditDataUsers_panel_select->MaximumSize = System::Drawing::Size(780, 565);
 			this->EditDataUsers_panel_select->Name = L"EditDataUsers_panel_select";
 			this->EditDataUsers_panel_select->Size = System::Drawing::Size(778, 563);
@@ -1120,15 +1502,15 @@ private:
 			this->EditDataUsers_panel_select_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->EditDataUsers_panel_select_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->EditDataUsers_panel_select_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this->EditDataUsers_panel_select_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->EditDataUsers_panel_select_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->EditDataUsers_panel_select_dataGridView->Location = System::Drawing::Point(0, 26);
@@ -1621,6 +2003,16 @@ private:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->FullListBookInDB_DataGridView))->EndInit();
 			this->PanelRegUser->ResumeLayout(false);
 			this->PanelRegUser->PerformLayout();
+			this->PanelSearch->ResumeLayout(false);
+			this->Search_Find_from_reader->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_reader_Grid_Select))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_reader_Grid_name))->EndInit();
+			this->Search_Find_from_authors->ResumeLayout(false);
+			this->Search_Find_from_authors->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_authors_Grid_Search))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Search_Find_from_authors_Grid_Authors))->EndInit();
+			this->Search_Buttons->ResumeLayout(false);
+			this->Search_Buttons->PerformLayout();
 			this->PanelEditInfoBook->ResumeLayout(false);
 			this->PanelEditInfoBook->PerformLayout();
 			this->PanelEditInfoBook_edit->ResumeLayout(false);
@@ -1690,5 +2082,11 @@ private:
 			System::Void EditInfoBook_AutorsTextBox_Leave(System::Object^ sender, System::EventArgs^ e);
 			System::Void EditInfoBook_ContextTextBox_Enter(System::Object^ sender, System::EventArgs^ e); 
 			System::Void EditInfoBook_ContextTextBox_Leave(System::Object^ sender, System::EventArgs^ e); 
+
+			System::Void Search_Buttons_find_from_reader_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void Search_Buttons_find_from_authors_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void Search_Find_from_authors_btn_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void Search_Find_from_reader_btn_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }
