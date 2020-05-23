@@ -16,6 +16,8 @@ namespace Course {
 		this->PanelEditDataUsers->Dock = System::Windows::Forms::DockStyle::None;
 		this->PanelEditInfoBook->Dock = System::Windows::Forms::DockStyle::None;
 		this->PanelSearch->Dock = System::Windows::Forms::DockStyle::None;
+		this->PanelViewListAllBooksAndAllUsers->Dock = System::Windows::Forms::DockStyle::None;
+		this->PanelAddBookToUser->Dock = System::Windows::Forms::DockStyle::None;
 		this->PanelRegNewBook->Dock = System::Windows::Forms::DockStyle::None;
 		// Раскрываем панель кнопки
 		this->PanelRegUser->Dock = System::Windows::Forms::DockStyle::Fill;

@@ -17,6 +17,8 @@ namespace Course {
 		this->PanelEditInfoBook->Dock = System::Windows::Forms::DockStyle::None;
 		this->PanelRegUser->Dock = System::Windows::Forms::DockStyle::None;
 		this->PanelRegNewBook->Dock = System::Windows::Forms::DockStyle::None;
+		this->PanelViewListAllBooksAndAllUsers->Dock = System::Windows::Forms::DockStyle::None;
+		this->PanelAddBookToUser->Dock = System::Windows::Forms::DockStyle::None;
 		// Отчищаем PanelSearch от лишнего
 		this->Search_Find_from_reader->Dock = System::Windows::Forms::DockStyle::None;
 		this->Search_Find_from_authors->Dock = System::Windows::Forms::DockStyle::None;

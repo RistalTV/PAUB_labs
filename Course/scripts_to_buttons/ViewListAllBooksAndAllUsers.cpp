@@ -12,7 +12,7 @@ namespace Course {
 			deque<UserBook> ubs = get_deque_books_taken();
 			deque<User> users = get_deque_users();
 			//Задаём текст заголовку
-			this->LabelUpMainRightPanel->Text = DeleteBook->Text;
+			this->LabelUpMainRightPanel->Text = ViewListAllBooksAndAllUsers->Text;
 			// Cоздание невидимой таблицы для DataTable
 			{
 				DataTable^ table; //Невидимая таблица данных
@@ -80,8 +80,6 @@ namespace Course {
 				ViewListAllBooksAndAllUsers_Grid->DataSource = table;
 			}
 
-			//Задаём текст заголовку
-			this->LabelUpMainRightPanel->Text = EditDataUsers->Text;
 			// Отчищаем ButtonMainRightPanel от лишнего
 			this->PanelDeleteBook->Dock = System::Windows::Forms::DockStyle::None;
 			this->PanelEditInfoBook->Dock = System::Windows::Forms::DockStyle::None;
@@ -89,6 +87,8 @@ namespace Course {
 			this->PanelSearch->Dock = System::Windows::Forms::DockStyle::None;
 			this->PanelRegNewBook->Dock = System::Windows::Forms::DockStyle::None;
 			this->EditDataUsers_panel_EditUser->Dock = System::Windows::Forms::DockStyle::None;
+			this->PanelViewListAllBooksAndAllUsers->Dock = System::Windows::Forms::DockStyle::None;
+			this->PanelAddBookToUser->Dock = System::Windows::Forms::DockStyle::None;
 			this->PanelEditDataUsers->Dock = System::Windows::Forms::DockStyle::None;
 			// Раскрываем панель кнопки
 			this->PanelViewListAllBooksAndAllUsers->Dock = System::Windows::Forms::DockStyle::Fill;

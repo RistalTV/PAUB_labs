@@ -109,9 +109,8 @@ int add_to_books_taken(Book book, User user)
 		db->ConnectionString = gcnew System::String(ConStr.c_str());
 		db->Open();
 		string Values = std::to_string(book.get_id_book()) + ", ";
-		Values += "'" + std::to_string(user.get_id()) + ", ";
-		Values += "'" + book.get_user_took_the_book_date() + "', ";
-		string cmdText = "INSERT INTO books_back_returned (id_book, id_user, user_took_the_book_date) VALUES( " + Values + " );";
+		Values += std::to_string(user.get_id());
+		string cmdText = "INSERT INTO books_taken (id_book, id_users) VALUES( " + Values + " );";
 		SQLiteCommand^ cmdInsertValue = db->CreateCommand();
 		cmdInsertValue->CommandText = gcnew System::String(cmdText.c_str());
 		cmdInsertValue->ExecuteNonQuery();
@@ -331,9 +330,11 @@ deque<User> get_deque_users()
 			//Пробегаем по каждой записи
 			int Counter = 1;
 			User u1;
-			while (reader->Read()) {
+			while (reader->Read()) 
+			{
 				//В каждой записи пробегаем по всем столбцам
-				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr) {
+				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr) 
+				{
 					//Добавлем значение столбца в sb
 					sb = reader->GetValue(colCtr)->ToString();
 					string stdSb = CastStrSystemToStd(sb->ToString());
@@ -551,6 +552,7 @@ int get_count_taken_books_authors(string FindAuthor)
 UserInfo validation_login(string login, string pass)
 {
 	UserInfo UI;
+	UI.valid_login = false;
 
 	SQLiteConnection^ db = gcnew SQLiteConnection();
 	try
@@ -564,7 +566,7 @@ UserInfo validation_login(string login, string pass)
 			//SQL запрос
 			string V1 = "'" + login + "'";
 			string V2 = "'" + pass + "'";
-			string cmdText = "SELECT login = " + V1 + " AND " + V2 + " FROM users;";
+			string cmdText = "SELECT * FROM users WHERE login = " + V1 + " AND  pass =" + V2 + " LIMIT 1;";
 			cmdSelect->CommandText = gcnew System::String(cmdText.c_str());
 			SQLiteDataReader^ reader = cmdSelect->ExecuteReader();
 			//В sb будем записывать
@@ -572,9 +574,12 @@ UserInfo validation_login(string login, string pass)
 			//Пробегаем по каждой записи
 			int Counter = 1;
 			User u1;
-			while (reader->Read()) {
+
+			while (reader->Read()) 
+			{
 				//В каждой записи пробегаем по всем столбцам
-				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr) {
+				for (int colCtr = 0; colCtr < reader->FieldCount; ++colCtr)
+				{
 					//Добавлем значение столбца в sb
 					sb = reader->GetValue(colCtr)->ToString();
 					string stdSb = CastStrSystemToStd(sb->ToString());
@@ -586,17 +591,21 @@ UserInfo validation_login(string login, string pass)
 					case 4: {u1.set_access(atoi(stdSb.c_str())); Counter++; break; }
 					case 5: {u1.set_name(stdSb);				 Counter++; break; }
 					case 6: {u1.set_surname(stdSb);				 Counter++; break; }
-					case 8: {u1.set_patronymic(stdSb);			 Counter++; break; }
-					case 9: {u1.set_birthday(stdSb);			 Counter = 1; break; }
+					case 7: {u1.set_patronymic(stdSb);			 Counter++; break; }
+					case 8: {u1.set_birthday(stdSb);			 Counter = 1; break; }
 					}
 				}
-				if (u1.get_id() != 0 || u1.get_login() != string("0") || u1.get_pass() != string("0"))
-				{
-					UI.user = u1;
-					UI.valid_login = true;
-					UI.access = u1.get_access();
-					return UI;
-				}
+				
+				if (u1.get_access() == 0 || u1.get_access() == 1)
+					{
+						UI.user = u1;
+						UI.valid_login = true;
+						UI.access = u1.get_access();
+					}
+					else
+					{
+						UI.valid_login = false;
+					}
 
 			}
 		}
@@ -605,6 +614,7 @@ UserInfo validation_login(string login, string pass)
 			Msg("Error Executing SQL: " + e->ToString(), "Exception While Displaying MyTable ...");
 		}
 		db->Close();
+		return UI;
 	}
 	finally
 	{

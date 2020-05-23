@@ -132,6 +132,16 @@
     <ClCompile Include="LK_admin.cpp" />
     <ClCompile Include="db.cpp" />
     <ClCompile Include="MessageWarnErrorInfo.cpp" />
+    <ClCompile Include="scripts_to_buttons\AddBookToUser.cpp" />
+    <ClCompile Include="scripts_to_buttons\DeleteBook.cpp" />
+    <ClCompile Include="scripts_to_buttons\EditDataUsers.cpp" />
+    <ClCompile Include="scripts_to_buttons\EditInfoBook.cpp" />
+    <ClCompile Include="scripts_to_buttons\LoginMainPanel.cpp" />
+    <ClCompile Include="scripts_to_buttons\RegNewBook.cpp" />
+    <ClCompile Include="scripts_to_buttons\RegUser.cpp" />
+    <ClCompile Include="scripts_to_buttons\Search.cpp" />
+    <ClCompile Include="scripts_to_buttons\UserMainPanel.cpp" />
+    <ClCompile Include="scripts_to_buttons\ViewListAllBooksAndAllUsers.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,13 +150,11 @@
     <ClInclude Include="db.h" />
     <ClInclude Include="Func.h" />
     <ClInclude Include="MessageWarnErrorInfo.h" />
+    <ClInclude Include="scripts_to_buttons\stafx.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="LK_admin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Course.rc" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LK_admin.resx">
@@ -155,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="login_background.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

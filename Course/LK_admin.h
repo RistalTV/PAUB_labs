@@ -17,9 +17,7 @@ namespace Course
 			LK_admin(void)
 			{
 				InitializeComponent();
-				//
-				//TODO: добавьте код конструктора
-				//
+			
 			}
 	
 		protected:
@@ -95,13 +93,9 @@ namespace Course
 	private: System::Windows::Forms::Panel^ EditDataUsers_panel_EditUser;
 	private: System::Windows::Forms::Panel^ EditDataUsers_panel_select;
 	public: System::Windows::Forms::Button^ EditDataUsers_panel_select_btn;
-	private:
 
-	private:
 	private: System::Windows::Forms::Label^ label16;
 	public: System::Windows::Forms::Button^ EditDataUsers_panel_Edit_btn_save;
-	private:
-	public:
 
 	public: System::Windows::Forms::DataGridView^ EditDataUsers_panel_select_dataGridView;
 	private: System::Windows::Forms::RadioButton^ EditDataUsers_panel_EditUser_admin;
@@ -109,17 +103,7 @@ namespace Course
 
 	private: System::Windows::Forms::RadioButton^ EditDataUsers_panel_EditUser_reader;
 	public: System::Windows::Forms::DateTimePicker^ EditDataUsers_panel_EditUser_birthday;
-	private:
 
-	private:
-
-	private:
-
-	private:
-	public:
-
-
-	private:
 	private: System::Windows::Forms::TextBox^ EditDataUsers_panel_EditUser_pass;
 	public:
 	private: System::Windows::Forms::TextBox^ EditDataUsers_panel_EditUser_login;
@@ -139,24 +123,17 @@ private:
 private: System::Windows::Forms::Panel^ PanelEditInfoBook_select;
 public: System::Windows::Forms::DataGridView^ EditInfoBook_dataGridView;
 public: System::Windows::Forms::Button^ EditInfoBook_select_btn;
-private:
-public:
-
-private:
 
 private: System::Windows::Forms::Label^ label25;
 public: System::Windows::Forms::Panel^ PanelEditInfoBook_edit;
-private:
+
 private: System::Windows::Forms::Label^ lEditInfoBook_edit_ID;
-public:
+
 private: System::Windows::Forms::Label^ label32;
 public: System::Windows::Forms::DateTimePicker^ EditInfoBook_release_data;
-private:
 
 public: System::Windows::Forms::DateTimePicker^ EditInfoBook_creation_data;
 public: System::Windows::Forms::Button^ EditInfoBook_save;
-private:
-
 
 public: System::Windows::Forms::Label^ label26;
 public: System::Windows::Forms::Label^ label27;
@@ -204,53 +181,36 @@ public: System::Windows::Forms::Panel^ PanelViewListAllBooksAndAllUsers;
 private: System::Windows::Forms::Label^ label38;
 public: System::Windows::Forms::DataGridView^ ViewListAllBooksAndAllUsers_Grid;
 public: System::Windows::Forms::Button^ AddBookToUser;
-public: System::Windows::Forms::Panel^ panel1;
+public: System::Windows::Forms::Panel^ PanelAddBookToUser;
+private: System::Windows::Forms::Panel^ PanelAddBookToUser_Book;
+public:
+private: System::Windows::Forms::Label^ label40;
+public: System::Windows::Forms::DataGridView^ PanelAddBookToUser_Book_Grid;
+public: System::Windows::Forms::Button^ PanelAddBookToUser_Book_btn;
+private:
+
+private:
+
+private: System::Windows::Forms::Panel^ PanelAddBookToUser_User;
+public:
 private: System::Windows::Forms::Label^ label39;
-public:
-public: System::Windows::Forms::DataGridView^ dataGridView1;
+public: System::Windows::Forms::DataGridView^ PanelAddBookToUser_User_Grid;
 private:
-private:
-
-private:
+public: System::Windows::Forms::Button^ PanelAddBookToUser_User_btn;
+private: System::Windows::Forms::Panel^ LoginMainPanel;
 public:
 
-private:
 public:
-public:
+private: System::Windows::Forms::Panel^ UserMainPanel;
+private: System::Windows::Forms::Panel^ AdminMainPanel;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Label^ DataLabel;
+private: System::Windows::Forms::Button^ UserMainPanel_btn;
+private: System::Windows::Forms::DataGridView^ UserMainPanel_Grid;
+private: System::Windows::Forms::TextBox^ loginField;
 
-private:
-
-
-public:
-
-
-
-
-
-
-private:
-
-public:
-
-
-
-
-
-
-
-
-
-
-
-
-private:
-
-	private:
-	public:
-
-	private:
-
-	public:
+private: System::Windows::Forms::TextBox^ passField;
+private: System::Windows::Forms::Button^ LoginMainPanel_btn;
 	public:
 			/// <summary>
 			/// Обязательная переменная конструктора.
@@ -264,20 +224,24 @@ private:
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle21 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle22 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle23 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle24 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle25 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle26 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle27 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle28 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle29 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle30 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LK_admin::typeid));
 			this->MainPanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->AdminMainPanel = (gcnew System::Windows::Forms::Panel());
 			this->MainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->upMainLeftPanel = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->ViewListAllBooksAndAllUsers = (gcnew System::Windows::Forms::Button());
+			this->AddBookToUser = (gcnew System::Windows::Forms::Button());
 			this->Search = (gcnew System::Windows::Forms::Button());
 			this->RegUser = (gcnew System::Windows::Forms::Button());
 			this->EditDataUsers = (gcnew System::Windows::Forms::Button());
@@ -287,6 +251,15 @@ private:
 			this->exit = (gcnew System::Windows::Forms::Button());
 			this->MainRightPanel = (gcnew System::Windows::Forms::Panel());
 			this->ButtonMainRightPanel = (gcnew System::Windows::Forms::Panel());
+			this->PanelAddBookToUser = (gcnew System::Windows::Forms::Panel());
+			this->PanelAddBookToUser_Book = (gcnew System::Windows::Forms::Panel());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->PanelAddBookToUser_Book_Grid = (gcnew System::Windows::Forms::DataGridView());
+			this->PanelAddBookToUser_Book_btn = (gcnew System::Windows::Forms::Button());
+			this->PanelAddBookToUser_User = (gcnew System::Windows::Forms::Panel());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->PanelAddBookToUser_User_Grid = (gcnew System::Windows::Forms::DataGridView());
+			this->PanelAddBookToUser_User_btn = (gcnew System::Windows::Forms::Button());
 			this->PanelViewListAllBooksAndAllUsers = (gcnew System::Windows::Forms::Panel());
 			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->ViewListAllBooksAndAllUsers_Grid = (gcnew System::Windows::Forms::DataGridView());
@@ -392,15 +365,26 @@ private:
 			this->NameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->UpMainRightPanel = (gcnew System::Windows::Forms::Panel());
 			this->LabelUpMainRightPanel = (gcnew System::Windows::Forms::Label());
-			this->AddBookToUser = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->label39 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->UserMainPanel = (gcnew System::Windows::Forms::Panel());
+			this->UserMainPanel_btn = (gcnew System::Windows::Forms::Button());
+			this->UserMainPanel_Grid = (gcnew System::Windows::Forms::DataGridView());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->DataLabel = (gcnew System::Windows::Forms::Label());
+			this->LoginMainPanel = (gcnew System::Windows::Forms::Panel());
+			this->LoginMainPanel_btn = (gcnew System::Windows::Forms::Button());
+			this->loginField = (gcnew System::Windows::Forms::TextBox());
+			this->passField = (gcnew System::Windows::Forms::TextBox());
 			this->MainPanel->SuspendLayout();
+			this->AdminMainPanel->SuspendLayout();
 			this->MainLeftPanel->SuspendLayout();
 			this->upMainLeftPanel->SuspendLayout();
 			this->MainRightPanel->SuspendLayout();
 			this->ButtonMainRightPanel->SuspendLayout();
+			this->PanelAddBookToUser->SuspendLayout();
+			this->PanelAddBookToUser_Book->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanelAddBookToUser_Book_Grid))->BeginInit();
+			this->PanelAddBookToUser_User->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanelAddBookToUser_User_Grid))->BeginInit();
 			this->PanelViewListAllBooksAndAllUsers->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ViewListAllBooksAndAllUsers_Grid))->BeginInit();
 			this->PanelDeleteBook->SuspendLayout();
@@ -426,22 +410,37 @@ private:
 			this->PanelRegNewBook->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->count_page))->BeginInit();
 			this->UpMainRightPanel->SuspendLayout();
-			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->UserMainPanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UserMainPanel_Grid))->BeginInit();
+			this->LoginMainPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// MainPanel
 			// 
-			this->MainPanel->Controls->Add(this->MainLeftPanel);
-			this->MainPanel->Controls->Add(this->MainRightPanel);
+			this->MainPanel->Controls->Add(this->AdminMainPanel);
+			this->MainPanel->Controls->Add(this->UserMainPanel);
+			this->MainPanel->Controls->Add(this->LoginMainPanel);
 			this->MainPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->MainPanel->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
 			this->MainPanel->Location = System::Drawing::Point(0, 0);
 			this->MainPanel->MaximumSize = System::Drawing::Size(980, 600);
-			this->MainPanel->MinimumSize = System::Drawing::Size(980, 600);
 			this->MainPanel->Name = L"MainPanel";
 			this->MainPanel->Size = System::Drawing::Size(980, 600);
 			this->MainPanel->TabIndex = 0;
+			// 
+			// AdminMainPanel
+			// 
+			this->AdminMainPanel->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->AdminMainPanel->Controls->Add(this->MainLeftPanel);
+			this->AdminMainPanel->Controls->Add(this->MainRightPanel);
+			this->AdminMainPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->AdminMainPanel->Location = System::Drawing::Point(3, 3);
+			this->AdminMainPanel->MaximumSize = System::Drawing::Size(980, 600);
+			this->AdminMainPanel->MinimumSize = System::Drawing::Size(980, 600);
+			this->AdminMainPanel->Name = L"AdminMainPanel";
+			this->AdminMainPanel->Size = System::Drawing::Size(980, 600);
+			this->AdminMainPanel->TabIndex = 7;
+			this->AdminMainPanel->Visible = false;
 			// 
 			// MainLeftPanel
 			// 
@@ -498,6 +497,19 @@ private:
 			this->ViewListAllBooksAndAllUsers->Text = L"• Показать  общий список выданных книг и кому они выданы";
 			this->ViewListAllBooksAndAllUsers->UseVisualStyleBackColor = false;
 			this->ViewListAllBooksAndAllUsers->Click += gcnew System::EventHandler(this, &LK_admin::ViewListAllBooksAndAllUsers_Click);
+			// 
+			// AddBookToUser
+			// 
+			this->AddBookToUser->BackColor = System::Drawing::Color::NavajoWhite;
+			this->AddBookToUser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->AddBookToUser->Location = System::Drawing::Point(10, 482);
+			this->AddBookToUser->Name = L"AddBookToUser";
+			this->AddBookToUser->Size = System::Drawing::Size(180, 50);
+			this->AddBookToUser->TabIndex = 0;
+			this->AddBookToUser->Text = L"• Добавить пользователю книгу";
+			this->AddBookToUser->UseVisualStyleBackColor = false;
+			this->AddBookToUser->Click += gcnew System::EventHandler(this, &LK_admin::AddBookToUser_Click);
 			// 
 			// Search
 			// 
@@ -601,7 +613,8 @@ private:
 			// 
 			// ButtonMainRightPanel
 			// 
-			this->ButtonMainRightPanel->Controls->Add(this->panel1);
+			this->ButtonMainRightPanel->BackColor = System::Drawing::Color::BurlyWood;
+			this->ButtonMainRightPanel->Controls->Add(this->PanelAddBookToUser);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelViewListAllBooksAndAllUsers);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelDeleteBook);
 			this->ButtonMainRightPanel->Controls->Add(this->PanelRegUser);
@@ -618,6 +631,162 @@ private:
 			this->ButtonMainRightPanel->Name = L"ButtonMainRightPanel";
 			this->ButtonMainRightPanel->Size = System::Drawing::Size(780, 600);
 			this->ButtonMainRightPanel->TabIndex = 1;
+			// 
+			// PanelAddBookToUser
+			// 
+			this->PanelAddBookToUser->AutoSize = true;
+			this->PanelAddBookToUser->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->PanelAddBookToUser->BackColor = System::Drawing::Color::BurlyWood;
+			this->PanelAddBookToUser->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelAddBookToUser->Controls->Add(this->PanelAddBookToUser_Book);
+			this->PanelAddBookToUser->Controls->Add(this->PanelAddBookToUser_User);
+			this->PanelAddBookToUser->Location = System::Drawing::Point(0, 35);
+			this->PanelAddBookToUser->MaximumSize = System::Drawing::Size(780, 565);
+			this->PanelAddBookToUser->Name = L"PanelAddBookToUser";
+			this->PanelAddBookToUser->Size = System::Drawing::Size(5, 5);
+			this->PanelAddBookToUser->TabIndex = 4;
+			// 
+			// PanelAddBookToUser_Book
+			// 
+			this->PanelAddBookToUser_Book->Controls->Add(this->label40);
+			this->PanelAddBookToUser_Book->Controls->Add(this->PanelAddBookToUser_Book_Grid);
+			this->PanelAddBookToUser_Book->Controls->Add(this->PanelAddBookToUser_Book_btn);
+			this->PanelAddBookToUser_Book->Location = System::Drawing::Point(0, 0);
+			this->PanelAddBookToUser_Book->MaximumSize = System::Drawing::Size(778, 563);
+			this->PanelAddBookToUser_Book->Name = L"PanelAddBookToUser_Book";
+			this->PanelAddBookToUser_Book->Size = System::Drawing::Size(0, 0);
+			this->PanelAddBookToUser_Book->TabIndex = 1;
+			// 
+			// label40
+			// 
+			this->label40->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Impact", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label40->Location = System::Drawing::Point(0, 0);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(0, 30);
+			this->label40->TabIndex = 4;
+			this->label40->Text = L"Выберите книгу которую хотите добавить";
+			this->label40->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// PanelAddBookToUser_Book_Grid
+			// 
+			this->PanelAddBookToUser_Book_Grid->AllowUserToAddRows = false;
+			this->PanelAddBookToUser_Book_Grid->AllowUserToDeleteRows = false;
+			this->PanelAddBookToUser_Book_Grid->AllowUserToResizeColumns = false;
+			this->PanelAddBookToUser_Book_Grid->AllowUserToResizeRows = false;
+			this->PanelAddBookToUser_Book_Grid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->PanelAddBookToUser_Book_Grid->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->PanelAddBookToUser_Book_Grid->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->PanelAddBookToUser_Book_Grid->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->PanelAddBookToUser_Book_Grid->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle21->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle21->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle21->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle21->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle21->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle21->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->PanelAddBookToUser_Book_Grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+			this->PanelAddBookToUser_Book_Grid->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->PanelAddBookToUser_Book_Grid->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->PanelAddBookToUser_Book_Grid->Location = System::Drawing::Point(0, -530);
+			this->PanelAddBookToUser_Book_Grid->Margin = System::Windows::Forms::Padding(20);
+			this->PanelAddBookToUser_Book_Grid->MaximumSize = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_Book_Grid->MinimumSize = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_Book_Grid->Name = L"PanelAddBookToUser_Book_Grid";
+			this->PanelAddBookToUser_Book_Grid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->PanelAddBookToUser_Book_Grid->Size = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_Book_Grid->StandardTab = true;
+			this->PanelAddBookToUser_Book_Grid->TabIndex = 2;
+			// 
+			// PanelAddBookToUser_Book_btn
+			// 
+			this->PanelAddBookToUser_Book_btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->PanelAddBookToUser_Book_btn->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->PanelAddBookToUser_Book_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->PanelAddBookToUser_Book_btn->Location = System::Drawing::Point(0, -50);
+			this->PanelAddBookToUser_Book_btn->MaximumSize = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_Book_btn->MinimumSize = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_Book_btn->Name = L"PanelAddBookToUser_Book_btn";
+			this->PanelAddBookToUser_Book_btn->Size = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_Book_btn->TabIndex = 3;
+			this->PanelAddBookToUser_Book_btn->Text = L"Добавить";
+			this->PanelAddBookToUser_Book_btn->UseVisualStyleBackColor = false;
+			this->PanelAddBookToUser_Book_btn->Click += gcnew System::EventHandler(this, &LK_admin::PanelAddBookToUser_Book_btn_Click);
+			// 
+			// PanelAddBookToUser_User
+			// 
+			this->PanelAddBookToUser_User->Controls->Add(this->label39);
+			this->PanelAddBookToUser_User->Controls->Add(this->PanelAddBookToUser_User_Grid);
+			this->PanelAddBookToUser_User->Controls->Add(this->PanelAddBookToUser_User_btn);
+			this->PanelAddBookToUser_User->Location = System::Drawing::Point(0, 0);
+			this->PanelAddBookToUser_User->MaximumSize = System::Drawing::Size(778, 563);
+			this->PanelAddBookToUser_User->Name = L"PanelAddBookToUser_User";
+			this->PanelAddBookToUser_User->Size = System::Drawing::Size(0, 0);
+			this->PanelAddBookToUser_User->TabIndex = 0;
+			// 
+			// label39
+			// 
+			this->label39->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Impact", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label39->Location = System::Drawing::Point(0, 0);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(0, 30);
+			this->label39->TabIndex = 4;
+			this->label39->Text = L"Выберите кому хотите добавить книгу";
+			this->label39->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// PanelAddBookToUser_User_Grid
+			// 
+			this->PanelAddBookToUser_User_Grid->AllowUserToAddRows = false;
+			this->PanelAddBookToUser_User_Grid->AllowUserToDeleteRows = false;
+			this->PanelAddBookToUser_User_Grid->AllowUserToResizeColumns = false;
+			this->PanelAddBookToUser_User_Grid->AllowUserToResizeRows = false;
+			this->PanelAddBookToUser_User_Grid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->PanelAddBookToUser_User_Grid->BackgroundColor = System::Drawing::Color::NavajoWhite;
+			this->PanelAddBookToUser_User_Grid->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->PanelAddBookToUser_User_Grid->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->PanelAddBookToUser_User_Grid->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
+			dataGridViewCellStyle22->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle22->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			dataGridViewCellStyle22->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle22->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle22->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle22->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->PanelAddBookToUser_User_Grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+			this->PanelAddBookToUser_User_Grid->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->PanelAddBookToUser_User_Grid->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->PanelAddBookToUser_User_Grid->Location = System::Drawing::Point(0, -530);
+			this->PanelAddBookToUser_User_Grid->Margin = System::Windows::Forms::Padding(20);
+			this->PanelAddBookToUser_User_Grid->MaximumSize = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_User_Grid->MinimumSize = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_User_Grid->Name = L"PanelAddBookToUser_User_Grid";
+			this->PanelAddBookToUser_User_Grid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->PanelAddBookToUser_User_Grid->Size = System::Drawing::Size(781, 480);
+			this->PanelAddBookToUser_User_Grid->StandardTab = true;
+			this->PanelAddBookToUser_User_Grid->TabIndex = 2;
+			// 
+			// PanelAddBookToUser_User_btn
+			// 
+			this->PanelAddBookToUser_User_btn->BackColor = System::Drawing::Color::NavajoWhite;
+			this->PanelAddBookToUser_User_btn->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->PanelAddBookToUser_User_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->PanelAddBookToUser_User_btn->Location = System::Drawing::Point(0, -50);
+			this->PanelAddBookToUser_User_btn->MaximumSize = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_User_btn->MinimumSize = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_User_btn->Name = L"PanelAddBookToUser_User_btn";
+			this->PanelAddBookToUser_User_btn->Size = System::Drawing::Size(778, 50);
+			this->PanelAddBookToUser_User_btn->TabIndex = 3;
+			this->PanelAddBookToUser_User_btn->Text = L"Выбрать";
+			this->PanelAddBookToUser_User_btn->UseVisualStyleBackColor = false;
+			this->PanelAddBookToUser_User_btn->Click += gcnew System::EventHandler(this, &LK_admin::PanelAddBookToUser_User_btn_Click);
 			// 
 			// PanelViewListAllBooksAndAllUsers
 			// 
@@ -656,15 +825,15 @@ private:
 			this->ViewListAllBooksAndAllUsers_Grid->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ViewListAllBooksAndAllUsers_Grid->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->ViewListAllBooksAndAllUsers_Grid->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle23->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle23->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->ViewListAllBooksAndAllUsers_Grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle23->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle23->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle23->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle23->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->ViewListAllBooksAndAllUsers_Grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
 			this->ViewListAllBooksAndAllUsers_Grid->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->ViewListAllBooksAndAllUsers_Grid->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->ViewListAllBooksAndAllUsers_Grid->Location = System::Drawing::Point(0, 30);
@@ -730,15 +899,15 @@ private:
 			this->FullListBookInDB_DataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->FullListBookInDB_DataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->FullListBookInDB_DataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle24->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle24->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->FullListBookInDB_DataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle24->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle24->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle24->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle24->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->FullListBookInDB_DataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
 			this->FullListBookInDB_DataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->FullListBookInDB_DataGridView->Location = System::Drawing::Point(5, 22);
 			this->FullListBookInDB_DataGridView->Margin = System::Windows::Forms::Padding(20);
@@ -1011,15 +1180,15 @@ private:
 			this->Search_Find_from_reader_Grid_Select->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->Search_Find_from_reader_Grid_Select->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->Search_Find_from_reader_Grid_Select->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle25->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle25->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->Search_Find_from_reader_Grid_Select->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle25->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle25->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle25->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle25->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_reader_Grid_Select->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
 			this->Search_Find_from_reader_Grid_Select->Dock = System::Windows::Forms::DockStyle::Right;
 			this->Search_Find_from_reader_Grid_Select->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->Search_Find_from_reader_Grid_Select->Location = System::Drawing::Point(185, 0);
@@ -1043,15 +1212,15 @@ private:
 			this->Search_Find_from_reader_Grid_name->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->Search_Find_from_reader_Grid_name->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->Search_Find_from_reader_Grid_name->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle26->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle26->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->Search_Find_from_reader_Grid_name->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle26->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle26->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle26->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle26->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_reader_Grid_name->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
 			this->Search_Find_from_reader_Grid_name->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->Search_Find_from_reader_Grid_name->Location = System::Drawing::Point(0, 76);
 			this->Search_Find_from_reader_Grid_name->Margin = System::Windows::Forms::Padding(20);
@@ -1162,15 +1331,15 @@ private:
 			this->Search_Find_from_authors_Grid_Search->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->Search_Find_from_authors_Grid_Search->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->Search_Find_from_authors_Grid_Search->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle27->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle27->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->Search_Find_from_authors_Grid_Search->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle27->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle27->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle27->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle27->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_authors_Grid_Search->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
 			this->Search_Find_from_authors_Grid_Search->Dock = System::Windows::Forms::DockStyle::Right;
 			this->Search_Find_from_authors_Grid_Search->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->Search_Find_from_authors_Grid_Search->Location = System::Drawing::Point(185, 0);
@@ -1194,15 +1363,15 @@ private:
 			this->Search_Find_from_authors_Grid_Authors->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->Search_Find_from_authors_Grid_Authors->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->Search_Find_from_authors_Grid_Authors->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle28->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle28->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->Search_Find_from_authors_Grid_Authors->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle28->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle28->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle28->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle28->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->Search_Find_from_authors_Grid_Authors->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
 			this->Search_Find_from_authors_Grid_Authors->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->Search_Find_from_authors_Grid_Authors->Location = System::Drawing::Point(-1, 71);
 			this->Search_Find_from_authors_Grid_Authors->Margin = System::Windows::Forms::Padding(20);
@@ -1511,15 +1680,15 @@ private:
 			this->EditInfoBook_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->EditInfoBook_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->EditInfoBook_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle29->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle29->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->EditInfoBook_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle29->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle29->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle29->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle29->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditInfoBook_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
 			this->EditInfoBook_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->EditInfoBook_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->EditInfoBook_dataGridView->Location = System::Drawing::Point(0, 26);
@@ -1593,15 +1762,15 @@ private:
 			this->EditDataUsers_panel_select_dataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->EditDataUsers_panel_select_dataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->EditDataUsers_panel_select_dataGridView->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle30->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle30->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle30->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle30->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle30->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle30->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->EditDataUsers_panel_select_dataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
 			this->EditDataUsers_panel_select_dataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->EditDataUsers_panel_select_dataGridView->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->EditDataUsers_panel_select_dataGridView->Location = System::Drawing::Point(0, 26);
@@ -2080,76 +2249,118 @@ private:
 			this->LabelUpMainRightPanel->Size = System::Drawing::Size(0, 20);
 			this->LabelUpMainRightPanel->TabIndex = 0;
 			// 
-			// AddBookToUser
+			// UserMainPanel
 			// 
-			this->AddBookToUser->BackColor = System::Drawing::Color::NavajoWhite;
-			this->AddBookToUser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->UserMainPanel->BackColor = System::Drawing::Color::SkyBlue;
+			this->UserMainPanel->Controls->Add(this->UserMainPanel_btn);
+			this->UserMainPanel->Controls->Add(this->UserMainPanel_Grid);
+			this->UserMainPanel->Controls->Add(this->label41);
+			this->UserMainPanel->Controls->Add(this->DataLabel);
+			this->UserMainPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->UserMainPanel->Location = System::Drawing::Point(989, 3);
+			this->UserMainPanel->MaximumSize = System::Drawing::Size(980, 600);
+			this->UserMainPanel->MinimumSize = System::Drawing::Size(980, 600);
+			this->UserMainPanel->Name = L"UserMainPanel";
+			this->UserMainPanel->Size = System::Drawing::Size(980, 600);
+			this->UserMainPanel->TabIndex = 7;
+			this->UserMainPanel->Visible = false;
+			// 
+			// UserMainPanel_btn
+			// 
+			this->UserMainPanel_btn->Location = System::Drawing::Point(889, 7);
+			this->UserMainPanel_btn->Name = L"UserMainPanel_btn";
+			this->UserMainPanel_btn->Size = System::Drawing::Size(74, 53);
+			this->UserMainPanel_btn->TabIndex = 9;
+			this->UserMainPanel_btn->Text = L"Вернуться";
+			this->UserMainPanel_btn->UseVisualStyleBackColor = true;
+			this->UserMainPanel_btn->Click += gcnew System::EventHandler(this, &LK_admin::UserMainPanel_btn_Click);
+			// 
+			// UserMainPanel_Grid
+			// 
+			this->UserMainPanel_Grid->BackgroundColor = System::Drawing::Color::LightSkyBlue;
+			this->UserMainPanel_Grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->UserMainPanel_Grid->Location = System::Drawing::Point(1, 99);
+			this->UserMainPanel_Grid->Name = L"UserMainPanel_Grid";
+			this->UserMainPanel_Grid->Size = System::Drawing::Size(970, 494);
+			this->UserMainPanel_Grid->TabIndex = 8;
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->AddBookToUser->Location = System::Drawing::Point(10, 482);
-			this->AddBookToUser->Name = L"AddBookToUser";
-			this->AddBookToUser->Size = System::Drawing::Size(180, 50);
-			this->AddBookToUser->TabIndex = 0;
-			this->AddBookToUser->Text = L"• Добавить пользователю книгу";
-			this->AddBookToUser->UseVisualStyleBackColor = false;
-			this->AddBookToUser->Click += gcnew System::EventHandler(this, &LK_admin::Search_Click);
+			this->label41->Location = System::Drawing::Point(7, 8);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(207, 31);
+			this->label41->TabIndex = 7;
+			this->label41->Text = L"Ваш профиль:";
 			// 
-			// panel1
+			// DataLabel
 			// 
-			this->panel1->AutoSize = true;
-			this->panel1->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->panel1->BackColor = System::Drawing::Color::BurlyWood;
-			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel1->Controls->Add(this->label39);
-			this->panel1->Controls->Add(this->dataGridView1);
-			this->panel1->Location = System::Drawing::Point(745, 576);
-			this->panel1->MaximumSize = System::Drawing::Size(780, 565);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(2, 562);
-			this->panel1->TabIndex = 4;
+			this->DataLabel->AutoSize = true;
+			this->DataLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->DataLabel->Location = System::Drawing::Point(216, 10);
+			this->DataLabel->Name = L"DataLabel";
+			this->DataLabel->Size = System::Drawing::Size(110, 31);
+			this->DataLabel->TabIndex = 7;
+			this->DataLabel->Text = L"______";
 			// 
-			// label39
+			// LoginMainPanel
 			// 
-			this->label39->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label39->Font = (gcnew System::Drawing::Font(L"Impact", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label39->Location = System::Drawing::Point(0, 0);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(0, 30);
-			this->label39->TabIndex = 1;
-			this->label39->Text = L"Список книг и кому они выданы";
-			this->label39->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->LoginMainPanel->BackColor = System::Drawing::Color::MediumTurquoise;
+			this->LoginMainPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LoginMainPanel.BackgroundImage")));
+			this->LoginMainPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->LoginMainPanel->Controls->Add(this->LoginMainPanel_btn);
+			this->LoginMainPanel->Controls->Add(this->loginField);
+			this->LoginMainPanel->Controls->Add(this->passField);
+			this->LoginMainPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->LoginMainPanel->Location = System::Drawing::Point(1975, 3);
+			this->LoginMainPanel->MaximumSize = System::Drawing::Size(980, 600);
+			this->LoginMainPanel->MinimumSize = System::Drawing::Size(980, 600);
+			this->LoginMainPanel->Name = L"LoginMainPanel";
+			this->LoginMainPanel->Size = System::Drawing::Size(980, 600);
+			this->LoginMainPanel->TabIndex = 7;
 			// 
-			// dataGridView1
+			// LoginMainPanel_btn
 			// 
-			this->dataGridView1->AllowUserToAddRows = false;
-			this->dataGridView1->AllowUserToDeleteRows = false;
-			this->dataGridView1->AllowUserToResizeColumns = false;
-			this->dataGridView1->AllowUserToResizeRows = false;
-			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::NavajoWhite;
-			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
-			this->dataGridView1->ClipboardCopyMode = System::Windows::Forms::DataGridViewClipboardCopyMode::EnableAlwaysIncludeHeaderText;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			this->LoginMainPanel_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->dataGridView1->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
-			this->dataGridView1->Location = System::Drawing::Point(0, 30);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(20);
-			this->dataGridView1->MaximumSize = System::Drawing::Size(781, 530);
-			this->dataGridView1->MinimumSize = System::Drawing::Size(781, 530);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
-			this->dataGridView1->Size = System::Drawing::Size(781, 530);
-			this->dataGridView1->StandardTab = true;
-			this->dataGridView1->TabIndex = 0;
+			this->LoginMainPanel_btn->Location = System::Drawing::Point(325, 429);
+			this->LoginMainPanel_btn->Name = L"LoginMainPanel_btn";
+			this->LoginMainPanel_btn->Size = System::Drawing::Size(330, 134);
+			this->LoginMainPanel_btn->TabIndex = 7;
+			this->LoginMainPanel_btn->Text = L"Войти";
+			this->LoginMainPanel_btn->UseVisualStyleBackColor = true;
+			this->LoginMainPanel_btn->Click += gcnew System::EventHandler(this, &LK_admin::LoginMainPanel_btn_Click);
+			// 
+			// loginField
+			// 
+			this->loginField->BackColor = System::Drawing::SystemColors::Window;
+			this->loginField->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->loginField->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->loginField->Location = System::Drawing::Point(402, 162);
+			this->loginField->MaxLength = 30;
+			this->loginField->Name = L"loginField";
+			this->loginField->Size = System::Drawing::Size(256, 56);
+			this->loginField->TabIndex = 0;
+			this->loginField->Text = L"Логин";
+			this->loginField->Enter += gcnew System::EventHandler(this, &LK_admin::loginField_Enter);
+			this->loginField->Leave += gcnew System::EventHandler(this, &LK_admin::loginField_Leave);
+			// 
+			// passField
+			// 
+			this->passField->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32.25F));
+			this->passField->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->passField->Location = System::Drawing::Point(399, 255);
+			this->passField->MaxLength = 18;
+			this->passField->Name = L"passField";
+			this->passField->Size = System::Drawing::Size(256, 56);
+			this->passField->TabIndex = 0;
+			this->passField->Text = L"Пароль";
+			this->passField->Enter += gcnew System::EventHandler(this, &LK_admin::passField_Enter);
+			this->passField->Leave += gcnew System::EventHandler(this, &LK_admin::passField_Leave);
 			// 
 			// LK_admin
 			// 
@@ -2166,15 +2377,21 @@ private:
 			this->Name = L"LK_admin";
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Library: Меню администратора";
+			this->Text = L"Library: Меню авторизации";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->MainPanel->ResumeLayout(false);
+			this->AdminMainPanel->ResumeLayout(false);
 			this->MainLeftPanel->ResumeLayout(false);
 			this->upMainLeftPanel->ResumeLayout(false);
 			this->upMainLeftPanel->PerformLayout();
 			this->MainRightPanel->ResumeLayout(false);
 			this->ButtonMainRightPanel->ResumeLayout(false);
 			this->ButtonMainRightPanel->PerformLayout();
+			this->PanelAddBookToUser->ResumeLayout(false);
+			this->PanelAddBookToUser_Book->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanelAddBookToUser_Book_Grid))->EndInit();
+			this->PanelAddBookToUser_User->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanelAddBookToUser_User_Grid))->EndInit();
 			this->PanelViewListAllBooksAndAllUsers->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ViewListAllBooksAndAllUsers_Grid))->EndInit();
 			this->PanelDeleteBook->ResumeLayout(false);
@@ -2208,8 +2425,11 @@ private:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->count_page))->EndInit();
 			this->UpMainRightPanel->ResumeLayout(false);
 			this->UpMainRightPanel->PerformLayout();
-			this->panel1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->UserMainPanel->ResumeLayout(false);
+			this->UserMainPanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UserMainPanel_Grid))->EndInit();
+			this->LoginMainPanel->ResumeLayout(false);
+			this->LoginMainPanel->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2269,5 +2489,16 @@ private:
 			System::Void Search_Find_from_reader_btn_Click(System::Object^ sender, System::EventArgs^ e);
 			System::Void EditDataUsers_panel_EditUser_delete_user_Click(System::Object^ sender, System::EventArgs^ e);
 			System::Void ViewListAllBooksAndAllUsers_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void PanelAddBookToUser_User_btn_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void PanelAddBookToUser_Book_btn_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void AddBookToUser_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void UserMainPanel_btn_Click(System::Object^ sender, System::EventArgs^ 
+e);
+			System::Void LoginMainPanel_btn_Click(System::Object^ sender, System::EventArgs^ e);
+			System::Void loginField_Enter(System::Object^ sender, System::EventArgs^ e);
+			System::Void passField_Enter(System::Object^ sender, System::EventArgs^ e); 
+			System::Void loginField_Leave(System::Object^ sender, System::EventArgs^ e);
+			System::Void passField_Leave(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

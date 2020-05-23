@@ -24,7 +24,11 @@ namespace Course {
 	
 	System::Void LK_admin::exit_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		Application::Exit();
+		this->LoginMainPanel->Visible = true;
+		this->AdminMainPanel->Visible = false;
+		this->Text = "Library: Меню авторизации";
+
+
 	}
 
 };
