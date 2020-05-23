@@ -183,9 +183,41 @@ namespace Course {
 					}
 				}
 			}
-	/// ================================================================================================
+
+
+			/// Клик по кнопке удалить аккаунт
+			System::Void LK_admin::EditDataUsers_panel_EditUser_delete_user_Click(System::Object^ sender, System::EventArgs^ e) {
+				
+				deque<User> us = get_deque_users();
+				int id = atoi(CastStrSystemToStd(EditDataUsers_panel_EditUser_ID->Text).c_str());
+				for(User user: us)
+					if (user.get_id() == id)
+						switch (delete_from_users(user))
+						{
+						case 0:
+						{
+							Msg("Удаление успешно выполнено!", "Инфо", MessageBoxButtons::OK,		MessageBoxIcon::Information);
+							break;
+						}
+						case 1:
+						{
+							Msg("Удаление успешно не выполнено!", "Инфо", MessageBoxButtons::OK,		MessageBoxIcon::Warning);
+							break;
+						}
+						case 2:
+						{
+							Msg("Не хватает данных!", "Инфо", MessageBoxButtons::OK,		MessageBoxIcon::Information);
+							break;
+						}
+						}
+				// Возвращаемся
+				LK_admin::EditDataUsers_Click(sender, e);
+
+			}
+
+	/// ==========================================================================================
 	/// События
-	/// ================================================================================================
+	/// ==========================================================================================
 		
 			/// Leave
 
