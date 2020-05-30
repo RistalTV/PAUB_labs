@@ -1,12 +1,12 @@
 #pragma once
-#include "/projects/PAUB_labs/Course/LK_admin.h"
-#include "/projects/PAUB_labs/Course/Book.h"
-#include "/projects/PAUB_labs/Course/User.h"
-#include "/projects/PAUB_labs/Course/MessageWarnErrorInfo.h"
+#include "../LK_admin.h"
+#include "../Book.h"
+#include "../User.h"
+#include "../MessageWarnErrorInfo.h"
 #include <Windows.h>
-#include "/projects/PAUB_labs/Course/Func.h"
-#include "/projects/PAUB_labs/Course/Data.h"
-#include "/projects/PAUB_labs/Course/db.h"
+#include "../Func.h"
+#include "../Data.h"
+#include "../db.h"
 
 
 using namespace Course;
