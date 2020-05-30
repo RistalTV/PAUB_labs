@@ -17,7 +17,7 @@ using namespace System::Data::SQLite;
 // =============================================
 // Константные переменные
 	// Путь до файла базы данных
-	const auto path_db = "C:\\projects\\PAUB_labs\\Course\\data.db";
+	const auto path_db = "data.db";
 
 // =============================================
 // Структуры
