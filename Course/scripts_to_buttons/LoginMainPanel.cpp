@@ -15,10 +15,11 @@ namespace Course {
 		}
 		else
 		{
-			int loc;
+			int loc = 99;
 			string login = CastStrSystemToStd(loginField->Text);
 			string pass = CastStrSystemToStd(passField->Text);
-			UserInfo UI = validation_login(login, pass);
+			UserInfo UI
+				= validation_login(login, pass);
 			if (UI.valid_login)
 			{
 				loc = UI.user.get_access();
@@ -93,7 +94,7 @@ namespace Course {
 			else
 			{
 
-				Msg("Введите даннык корректно", "Ошибка");
+				Msg("Проверьте введённые данные", "Ошибка");
 			}
 			switch (loc)
 			{
